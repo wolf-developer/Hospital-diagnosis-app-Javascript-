@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAAMS - Western Australia AntiMicrobial Stewardship</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/basic.css" />
+    <link rel="stylesheet" href="bootstrap/css/style.css" />
+    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/codecheckWA.js"></script>
+    <!-- Needed for Forms Feature Detection -->
+    <script src="polyfill/better-dom.min.js"></script>
+    <!-- Needed for Validation -->
+    <script src="polyfill/better-dateinput-polyfill.js"></script>
+    <script src="polyfill/ie-array-polyfill.js"></script>
+    <!-- General helpful functions -->
+    <script src="bootstrap/js/kraken.js"></script>
+</head>
+
+<body>
+
+    <!-- loading page -->
+    <div data-role="page" id="load" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Loading</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Loading</span>
+            </h3>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /load -->
+
+    <!-- Start of dosing nomograms -->
+    <!-- Start Dosing nomogram page ?type #dose -->
+    <div data-role="page" id="dose" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Display dosing nomograms for</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#codeCheck">Code Checker</a></li>
+                <li><a href="#dose7">Cockcroft Gault &#40;CrCl&#41; Calculator</a></li>
+                <li><a href="#dose1">Gentamicin nomogram</a></li>
+                <li><a href="#dose12">Gentamicin Empiric Dose Calculator</a></li>
+                <li><a href="#dose10">Surgical prophylaxis antibiotic half-lives nomogram</a></li>
+                <li><a href="#dose11">Switch to Orals Nomogram</a></li>
+                <li><a href="#dose2">Vancomycin Nomogram</a></li>
+                <li><a href="#dose6">Vancomycin empiric dose calculator</a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose -->
+
+    <!-- Start of code checker page: #codeCheck -->
+    <div data-role="page" id="codeCheck" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Code Verifier</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <!--CODE CHECKER CONTENT-->
+            <script type="text/javascript">
+                var calcCode = function () {
+                    var userCode = $('#userCode').val();
+                    var anti = $('#codeAntibiotic').val();
+                    var userDate = new Date($('#userDate').val());
+
+                    var endText = checkCode(userCode, userDate, anti)
+
+                    $('#endText').text(endText);
+                }
+            </script>
+            <form onsubmit="return false">
+                <h4 class="color-primary mrgn20b">Enter the WAAMS code, date prescribed, and antibiotic to check
+                    validity and expiry date:</h4>
+                <div class="form-group"><label for="userCode"><b>WAAMS CODE:</b></label><input id="userCode"
+                        name="userCode" class="form-control"></div>
+                <div class="form-group"><label for="userDate"><b>Date of first dose of antibiotic:</b></label><input
+                        id="userDate" name="userDate" type="date" class="form-control"></div>
+                <div class="form-group">
+                    <label for="codeAntibiotic"><b>Antibiotic prescribed:</b></label>
+                    <select name="codeAntibiotic" id="codeAntibiotic" class="form-control" value="-">
+                        <option value="IV aci">Aciclovir IV</option>
+                        <option value="PO aci">Aciclovir PO</option>
+                        <option value="amocla">Amoxicillin IV & Clavulanate</option>
+                        <option value="IV azi">Azithromycin IV</option>
+                        <option value="PO azi">Azithromycin PO</option>
+                        <option value="aztreo">Aztreonam</option>
+                        <option value="cefota">Cefotaxime</option>
+                        <option value="cefepi">Cefepime</option>
+                        <option value="ceftaz">Ceftazidime</option>
+                        <option value="ceftri">Ceftriaxone</option>
+                        <option value="cefuro">Cefuroxime</option>
+                        <option value="IV cip">Ciprofloxacin IV</option>
+                        <option value="PO cip">Ciprofloxacin PO</option>
+                        <option value="clarit">Clarithromycin</option>
+                        <option value="IV cli">Clindamycin IV</option>
+                        <option value="PO cli">Clindamycin PO</option>
+                        <option value="iverme">Ivermectin PO</option>
+                        <option value="gentam">Gentamicin</option>
+                        <option value="merope">Meropenem</option>
+                        <option value="IV mox">Moxifloxacin IV</option>
+                        <option value="PO mox">Moxifloxacin PO</option>
+                        <option value="norflo">Norfloxacin</option>
+                        <option value="oselta">Oseltamivir</option>
+                        <option value="pipera">Piperacillin/tazobactam</option>
+                        <option value="valaci">Valaciclovir</option>
+                        <option value="vancom">Vancomycin</option>
+                    </select>
+                </div>
+                <br>
+                <button onclick="calcCode();" class="btn btn-primary">Check</button>
+                <hr>
+                <p align="left"><span id="endText"></span> <span id="codeExpiry"></span></strong></p>
+            </form>
+        </div>
+        <!--/vanc load body content-->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /codeCheck -->
+
+
+
+    <!-- Start of dose nomogram page gent #dose1 -->
+    <div data-role="page" id="dose1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Gentamicin dosing nomogram</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Gentamicin dose should be based on adjusted body weight for patients with
+                actual body weight more than 20% over ideal weight. Contact pharmacy for dose recommendation in morbidly
+                obese patients.</h3>
+            <h4 class="color-primary mrgn20b">Initial Paediatric Gentamicin Dosing &#40;Age &lt; 12 years&#41;</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th colspan="2">Age</th>
+                        <th>Initial<br> dose</th>
+                        <th>Dosing<br> frequency</th>
+                        <th>Maximum number <br>of empirical doses</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Neonates &lt;30 weeks<br> postmenstrual age</td>
+                        <td>postnatal age<br> 0 to 7 days</td>
+                        <td>5 mg/kg</td>
+                        <td>48-hourly</td>
+                        <td>2 doses <br>&#40;at 0 and 48 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age<br> 8 to 28 days</td>
+                        <td>4 mg/kg</td>
+                        <td>36-hourly</td>
+                        <td>2 doses <br>&#40;at 0 and 36 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age<br> 29 days or older</td>
+                        <td>4 mg/kg</td>
+                        <td>24-hourly</td>
+                        <td>3 doses <br>&#40;at 0, 24 and 48 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">neonates 30 to 34 <br>weeks postmenstrual age</td>
+                        <td>postnatal age<br> 0 to 7 days</td>
+                        <td>4.5 mg/kg</td>
+                        <td>36-hourly</td>
+                        <td>2 doses <br>&#40;at 0 and 36 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age<br> 8 days and older</td>
+                        <td>4 mg/kg</td>
+                        <td>24-hourly</td>
+                        <td>3 doses <br>&#40;at 0, 24 and 48 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">neonates 35 weeks<br> postmenstrual age or older </td>
+                        <td>4 mg/kg</td>
+                        <td>24-hourly</td>
+                        <td>3 doses <br>&#40;at 0, 24 and 48 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">infants and children</td>
+                        <td>7.5 mg/kg</td>
+                        <td>24-hourly</td>
+                        <td>3 doses <br>&#40;at 0, 24 and 48 hours&#41;</td>
+                    </tr>
+                </table>
+            </div>
+            <hr />
+            <h4 class="color-primary mrgn20b">Initial Gentamicin/Tobramycin Dosing &#40;age &gt; 12 years&#41;</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Creatinine clearance<br> (mL/min)</th>
+                        <th>Initial<br> dose</th>
+                        <th>Dosing<br> frequency</th>
+                        <th>Maximum number <br>of empirical doses</th>
+                    </tr>
+                    <tr>
+                        <td>More than<br> 60 mL/min</td>
+                        <td>4 to 5 mg/kg</td>
+                        <td>24-hourly</td>
+                        <td>3 doses <br>&#40;at 0, 24 and 48 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>40 to 60 mL/min</td>
+                        <td>4 to 5 mg/kg</td>
+                        <td>36-hourly</td>
+                        <td>2 doses <br>&#40;at 0 and 36 hours&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>less than <br>40 mL/min</td>
+                        <td>4mg/kg</td>
+                        <td colspan="2">Single dose, then seek expert advice</td>
+                    </tr>
+                </table>
+            </div>
+            <hr />
+            <ul class="line30">
+                <li>If actual body weight is more than 20% over the ideal body weight, use adjusted body weight to
+                    calculate the dose. For morbidly obese patients, seek expert advice.</li>
+                <li>Critically ill patients with severe sepsis have higher volumes of distribution. In these patients a
+                    dose of 7mg/kg may be appropriate</li>
+                <li>For dosing in children with cystic fibrosis or those receiving chemotherapy, seek expert advice</li>
+                <li>For children with impaired renal function (estimated glomerular filtration rate [eGFR] less than 50
+                    mL/min/1.73 m<sup>2</sup>), give a single dose, then seek expert advice for subsequent dosing or
+                    selection of alternative drug. Use the modified Schwartz formula to estimate GFR.</li>
+                <li>Postmenstrual age is the time elapsed between the first day of the last menstrual period and birth
+                    (gestational age) plus the time elapsed after birth (postnatal age)</li>
+                <li>Use the <a href="#dose7">Cockcroft gault calculator</a> to calculate renal function for adults if
+                    using the nomogram, or use the <a href="#dose12">adult aminoglycoside dose calculator</a></li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on empirical therapy with aminoglycosides</a> - Antibiotic Expert
+                    Groups. Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited;
+                    2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose1 -->
+
+    <!-- Start of dose nomogram page vanc #dose2 -->
+    <div data-role="page" id="dose2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Vancomycin dosing nomograms</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Vancomycin dosing should be based on weight and renal function for adult
+                patients or age and weight for neonates and children:</h3>
+            <hr />
+            <h4 class="color-primary mrgn20b">Vancomycin Dosing in Paediatrics</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <th class="darkbackcolour" colspan="2">Age</th>
+                        <th class="darkbackcolour">Starting Dose <br>&#40;use actual body weight&#41;</th>
+                        <th class="darkbackcolour">Dosing <br>frequency</th>
+                        <th class="darkbackcolour">Timing of first <br>trough concentration</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Neonates &lt; 30 weeks<br> postmenstrual age &#40;NB1&#41;</td>
+                        <td>postnatal age<br> 0 to 14 days</td>
+                        <td>15 mg/kg</td>
+                        <td>18-hourly</td>
+                        <td>Before the second dose</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age <br>14 days or older</td>
+                        <td>15 mg/kg</td>
+                        <td>12-hourly</td>
+                        <td>Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour" rowspan="2">Neonates 30 to 36 weeks<br> postmenstrual age
+                            &#40;NB1&#41;</td>
+                        <td class="bluebackcolour">postnatal age <br>0 to 14 days</td>
+                        <td class="bluebackcolour">15 mg/kg</td>
+                        <td class="bluebackcolour">12-hourly</td>
+                        <td class="bluebackcolour">Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour">postnatal age <br>14 days or older</td>
+                        <td class="bluebackcolour">15 mg/kg</td>
+                        <td class="bluebackcolour">8-hourly</td>
+                        <td class="bluebackcolour">Before the fourth dose</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Neonates 37 to 44 weeks<br> postmenstrual age &#40;NB1&#41;</td>
+                        <td>postnatal age<br> 0 to 7 days</td>
+                        <td>15 mg/kg</td>
+                        <td>12-hourly</td>
+                        <td>Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age <br>7 days or older</td>
+                        <td>15 mg/kg</td>
+                        <td>8-hourly</td>
+                        <td>Before the fourth dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour" colspan="2">Infants and children &#40;NB2&#41;</td>
+                        <td class="bluebackcolour">15 mg/kg up to 750 mg</td>
+                        <td class="bluebackcolour">6-hourly</td>
+                        <td class="bluebackcolour">Before the fifth dose</td>
+                    </tr>
+                </table>
+                <ul class="line30">
+                    <li><b>NB1</b>- Postmenstrual age is the time elapsed between the first day of the last menstrual
+                        period and birth (gestational age) plus the time elapsed after birth (postnatal age)</li>
+                    <li><b>NB2</b>- The Therapeutic Guidelines gives an alternative 12-hourly dosing in this group;
+                        however local NT data support using 6-hourly dosing in all children up to 12 years</li>
+                </ul>
+            </div>
+            <hr />
+            <h4 class="color-primary mrgn20b">Vancomycin Dosing in Adults</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <td>Actual body<br> weight &#40;kg&#41;</td>
+                        <td>CrClr <br>&lt; 20 mL/min</td>
+                        <td>CrClr <br>20-60 mL/min</td>
+                        <td>CrClr <br>&gt; 60 mL/min</td>
+                        <td class="bg-success">Administer<br> over<sup>(1)</sup></td>
+                    </tr>
+                    <tr>
+                        <td>&lt; 40</td>
+                        <td>Call infectious diseases</td>
+                        <td>Call infectious diseases</td>
+                        <td>Call infectious diseases</td>
+                        <td class="bg-success">---</td>
+                    </tr>
+                    <tr>
+                        <td>40-49</td>
+                        <td>750 mg<br />48 hly</td>
+                        <td>750 mg<br />24 hly</td>
+                        <td>750 mg<br />12 hly</td>
+                        <td class="bg-success">1 hr<br />15 min</td>
+                    </tr>
+                    <tr>
+                        <td>50-64</td>
+                        <td>1000 mg<br />48 hly</td>
+                        <td>1000 mg<br />24 hly</td>
+                        <td>1000 mg<br />12 hly</td>
+                        <td class="bg-success">1 hr<br />40 min</td>
+                    </tr>
+                    <tr>
+                        <td>65-79</td>
+                        <td>1250 mg<br />48 hly</td>
+                        <td>1250 mg<br />24 hly</td>
+                        <td>1250 mg<br />12 hly</td>
+                        <td class="bg-success">2 hrs<br />5 min</td>
+                    </tr>
+                    <tr>
+                        <td>80-94</td>
+                        <td>1500 mg<br />48 hly</td>
+                        <td>1500 mg<br />24 hly</td>
+                        <td>1500 mg<br />12 hly</td>
+                        <td class="bg-success">2 hrs<br />30 min</td>
+                    </tr>
+                    <tr>
+                        <td>95-110</td>
+                        <td>1750 mg<br />48 hly</td>
+                        <td>1750 mg<br />24 hly</td>
+                        <td>1750 mg<br />12 hly</td>
+                        <td class="bg-success">3 hrs</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 110</td>
+                        <td>Call infectious diseases</td>
+                        <td>Call infectious diseases</td>
+                        <td>Call infectious diseases</td>
+                        <td class="bg-success">---</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-success">Timing of 1<sup>st</sup><br> trough level<sup>(2)</sup></td>
+                        <td class="bg-success">48 hrs after <br>the 1<sup>st</sup> dose<sup>(3)</sup></td>
+                        <td class="bg-success">Before the<br> 3<sup>rd</sup> dose</td>
+                        <td class="bg-success">Before the <br />4<sup>th</sup> dose</td>
+                        <td class="bg-success">---</td>
+                    </tr>
+                </table>
+            </div>
+
+            <ol type="1" class="line30">
+                <li>Vancomycin should be administered at a maximum rate of 10 mg/min to avoid <span
+                        class="color-danger bold">Red Person</span> Syndrome</li>
+                <li>"Trough" levels are taken within 60 minutes of the next dose. If a loading dose is given then it is
+                    considered the first dose</li>
+                <li>In patients with CrClr &lt; 20 mL/min, the clinical context (e.g haemodialysis) determines whether
+                    the next dose is given before the trough concentration is available or withheld until the result is
+                    known</li>
+            </ol>
+            <hr />
+            <ul type=circle class="line30">
+                <li>Please contact infectious diseases within 48 hours of initiating therapy with vancomycin</li>
+                <li>Watch baseline creatinine closely while treating a patient with vancomycin. An increase from
+                    baseline creatinine will almost always result in an increase in vancomycin concentration as
+                    vancomycin is 40-100% renally cleared. A sudden dramatic increase in creatinine should always prompt
+                    an immediate vancomycin level prior to the next dose, witholding the next dose until the level is
+                    available.</li>
+                <li>If a dose is missed or delayed within 48 hours of taking a level please contact pharmacy for
+                    interpretation of trough levels as vancomycin will not have reached steady state</li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose2 -->
+
+    <!-- Start of dose6 page: #dose6 -->
+    <div data-role="page" id="dose6" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Adult vancomycin loading dose calculator</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content" class="container-fluid">
+            <!--Vancomycin dose calculator body content-->
+            <script>
+                var calcvdose = function () {
+                    var vheight = parseInt($('#vheight').val());
+                    var vweight = parseFloat($('#vweight').val());
+                    var vcreat = parseInt($('#vcreat').val());
+                    var vload = 0;
+                    var vdose1 = 0;
+                    var vage = parseInt($('#vage').val());
+                    var vcrcl = 0;
+                    var vcrclround = 0;
+                    var vextracm = (parseInt($('#vheight').val()) - 152);
+                    var vangen = 0;
+                    vcrcl = 0;
+
+                    if (vheight <= 152) {
+                        vextracm = 0
+                    }
+                    else if (vheight > 152) {
+                        vextracm = (parseInt($('#vheight').val()) - 152);
+                    }
+                    if (parseInt($('#vgenderweight').val()) > 47) {
+                        vangen = 1
+                    } else if (parseInt($('#vgenderweight').val()) < 47) {
+                        vangen = 0.85
+                    }
+                    if (parseInt($('#vweight').val()) < (parseInt($('#vgenderweight').val()) + (0.9 * vextracm))) {
+                        idbw = parseFloat($('#vweight').val());
+                    } else if (vheight > 152) {
+                        idbw = (parseFloat($('#vgenderweight').val()) + (0.9 * vextracm))
+                    } else if (vheight <= 152) {
+                        idbw = parseFloat($('#vgenderweight').val())
+                    }
+                    vcrcl = (((140 - vage) * idbw) / (0.814 * vcreat)) * vangen
+                    vcrclround = Math.round(vcrcl)
+                    $('#vcrclround').text(vcrclround);
+                    if (vcrcl < 20 && vweight >= 40 && vweight <= 110) {
+                        $('#vinterval').text("48-hourly, take trough level before the first dose")
+                    } else if (vcrcl >= 20 && vcrcl <= 60 && vweight >= 40 && vweight <= 110) {
+                        $('#vinterval').text("24-hourly, take trough level before the third dose")
+                    } else if (vcrcl >= 60 && vweight >= 40 && vweight <= 110) {
+                        $('#vinterval').text("12-hourly, take trough level before the fourth dose")
+                    }
+                    if (vweight < 40) {
+                        $('#vdose').text("Please contact infectious diseases for dosing in underweight patients")
+                    } else if ((vweight >= 40) && (vweight <= 49)) {
+                        $('#vdose').text("750")
+                    } else if ((vweight >= 50) && (vweight <= 64)) {
+                        $('#vdose').text("1000")
+                    } else if ((vweight >= 65) && (vweight <= 79)) {
+                        $('#vdose').text("1250")
+                    } else if ((vweight >= 80) && (vweight <= 94)) {
+                        $('#vdose').text("1500")
+                    } else if ((vweight >= 95) && (vweight <= 110)) {
+                        $('#vdose').text("1750")
+                    } else if (vweight > 105) {
+                        $('#vdose').text("Please contact infectious diseases for dosing in obese patients")
+                    }
+
+                    if ((vweight >= 40) && (vweight < 50)) {
+                        vload = 1250
+                    } else if ((vweight >= 50) && (vweight < 60)) {
+
+                        vload = 1500
+                    } else if ((vweight >= 60) && (vweight < 69)) {
+
+                        vload = 1750
+                    } else if ((vweight >= 69) && (vweight < 78)) {
+
+                        vload = 2000
+                    } else if ((vweight >= 78) && (vweight < 87)) {
+
+                        vload = 2250
+                    } else if ((vweight >= 87) && (vweight < 96)) {
+
+                        vload = 2500
+                    } else if ((vweight >= 96) && (vweight <= 105)) {
+                        vload = 2750
+                    } else if (vweight > 105) {
+                        alert("Please contact infectious diseases for advice for patients weighing over 105Kg")
+                        vload = "Please contact infectious diseases";
+                    }
+                    $('#vload').text(vload);
+
+                }
+            </script>
+            <form onsubmit="return false">
+                <h4 class="color-primary mrgn20b">Enter the patient details to calculate the vancomycin loading and
+                    maintenance dose:</h4>
+                <div class="form-group">
+                    <label for="vgenderweight"><b>Gender:</b></label>
+                    <select name="vgenderweight" id="vgenderweight" class="form-control">
+                        <option value="50.0">Male</option>
+                        <option value="45.5">Female</option>
+                    </select>
+                </div>
+                <div class="form-group"><label for="vage"><b>Age (years):</b></label><input type="number" min="12"
+                        id="vage" name="vage" class="form-control"></div>
+                <div class="form-group"><label for="vheight"><b>Height (cm):</b></label><input type="number" min="70"
+                        step="0.1" id="vheight" name="vheight" class="form-control"></div>
+                <div class="form-group"><label for="vweight"><b>Actual weight (kg):</b></label><input type="number"
+                        min="40" step="0.01" id="vweight" name="vweight" class="form-control"></div>
+                <div class="form-group"><label for="vcreat"><b>Creatinine:</b></label><input type="number" min="20"
+                        id="vcreat" name="vcreat" class="form-control"></div>
+                <br>
+                <button onclick="calcvdose();" class="btn btn-primary">Calculate</button>
+                <hr>
+                <p align="left">Vancomycin loading dose (optional): <strong><span id="vload"></span></strong> <b>mg</b>
+                </p>
+                <p align="left">Vancomycin maintenance dose: <strong><span id="vdose"></span> mg, </strong> <span
+                        id="vinterval">-</span></p>
+                <hr>
+                <p align="left">This patient has a Cockcroft Gault calculated creatinine clearance of: <strong><span
+                            id="vcrclround"></span></strong> <b> mL/min</b></p>
+            </form>
+            <hr />
+            <ul class="line30">
+                <li>
+                    This calculator must not be used on large muscular patients, it assumes that all weights above IDBW
+                    are due to fatty tissue, large muscular patients are likely to be underdosed when using this
+                    calculator, please contact infectious diseases for advice with these patients
+                </li>
+                <li>
+                    This calculator is for use as a guide only. The following patient groups may have altered
+                    pharmacokinetics and modified doses may be required. Please contact infectious diseases for advice
+                    with the following:
+                    <ul class="line30">
+                        <li>critically ill patients with severe sepsis or septic shock</li>
+                        <li>patients receiving renal replacement therapy</li>
+                        <li>pregnant women</li>
+                        <li>patients with ascites or fluid overload</li>
+                        <li>morbidly obese or very low body weight patients</li>
+                    </ul>
+                </li>
+                <li>This calculator is not for use in ICU patients &#40;contact the ICU pharmacist or treating physician
+                    when dosing in ICU patients&#41;</li>
+                <li>This calculator is not for use paediatric patients &lt; 12 years old</li>
+                <li>A loading dose of vancomycin should be given to patients with serious infections who are critically
+                    ill &#40;eg, severe sepsis&#41;</li>
+            </ul>
+        </div>
+        <!--/vanc load body content-->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose6 -->
+
+    <!-- Start of dose7 page: #dose7 -->
+    <div data-role="page" id="dose7" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Adult creatinine clearance calculator</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <!--Vancomycin dose calculator body content-->
+            <h4 class="color-primary mrgn20b">Cockcroft Gault Creatinine Clearance Calculator for &gt;12 years only:
+            </h4>
+            <script>
+                var calccrcl = function () {
+                    var cheight = parseInt($('#cheight').val());
+                    var cweight = parseFloat($('#cweight').val());
+                    var ccreat = parseInt($('#ccreat').val());
+                    var cage = parseInt($('#cage').val());
+                    var ccrcl = 0;
+                    var cextracm = (parseInt($('#cheight').val()) - 152);
+                    var cangen = 0;
+                    if (cheight <= 152) {
+                        cextracm = 0
+                    }
+                    else if (cheight > 152) {
+                        cextracm = (parseInt($('#cheight').val()) - 152);
+                    }
+                    if (parseInt($('#cgenderweight').val()) > 47) {
+                        cangen = 1
+                    } else if (parseInt($('#cgenderweight').val()) < 47) {
+                        cangen = 0.85
+                    }
+                    if (parseInt($('#cweight').val()) < (parseInt($('#cgenderweight').val()) + (0.9 * cextracm))) {
+                        idbw = parseFloat($('#cweight').val());
+                    } else if (cheight > 152) {
+                        idbw = (parseFloat($('#cgenderweight').val()) + (0.9 * cextracm))
+                    } else if (cheight <= 152) {
+                        idbw = parseFloat($('#cgenderweight').val())
+                    }
+                    if (cage < 12) {
+                        ccrcl = 0
+                    } else if (cage > 12) {
+                        ccrcl = Math.round(((((140 - cage) * idbw) / (0.814 * ccreat)) * cangen))
+                    }
+                    if (cage < 12) {
+                        alert("Please use the modified Schwartz equation to calculate a dose for paediatric patients. Do not use this calculator")
+                    }
+                    $('#ccrcl').text(ccrcl);
+                }
+                var clearCockcroft = function () {
+                    //TODO find out how to reset all the values to 0 for the clear button.
+                    cangen = 0;
+                    cheight = 0;
+                    cweight = 0;
+                    ccreat = 0;
+                    cage = 0;
+                    ccrcl = 0;
+                    cextracm = 0;
+                    cangen = 0;
+                    document.getElementById("cockcroftForm").reset();
+                    $('#ccrcl').text(ccrcl);
+                };
+
+            </script>
+            <hr />
+            <form id="cockcroftForm" action="" onsubmit="return false">
+                <h4 class="mrgn20b color-success">Enter the patient details to calculate the creatinine clearance:</h4>
+                <div class="form-group">
+                    <label for="cgenderweight"><b>Gender:</b></label>
+                    <select name="cgenderweight" id="cgenderweight" class="form-control">
+                        <option value="50.0">Male</option>
+                        <option value="45.5">Female</option>
+                    </select>
+                </div>
+                <div class="form-group"><label for="cheight"><b>Height (cm):</b></label><input type="number" min="70"
+                        step="0.1" id="cheight" name="cheight" class="form-control"></div>
+                <div class="form-group"><label for="cweight"><b>Actual weight (kg):</b></label><input type="number"
+                        min="40" step="0.01" id="cweight" name="cweight" class="form-control"></div>
+                <div class="form-group"><label for="cage"><b>Age (years):</b></label><input type="number" min="12"
+                        id="cage" name="cage" class="form-control"></div>
+                <div class="form-group"><label for="ccreat"><b>Creatinine:</b></label><input type="number" min="20"
+                        id="ccreat" name="ccreat" class="form-control"></div>
+                <p align="left">Creatinine Clearance:<strong><span id="ccrcl">0</span></strong> <b>mL/min</b></p>
+                <br>
+                <button onclick="calccrcl();" class="btn btn-primary">Calculate</button>
+                <button onclick="clearCockcroft();" class="btn btn-primary">Clear</button>
+            </form>
+            <ul class="line30">
+                <li>
+                    This calculator is for use as a guide only. The following patient groups may have altered
+                    pharmacokinetics and modified doses may be required. Please contact infectious diseases for advice
+                    with the following:
+                    <ul class="line30">
+                        <li>critically ill patients with severe sepsis or septic shock</li>
+                        <li>patients receiving renal replacement therapy</li>
+                        <li>pregnant women</li>
+                        <li>patients with ascites or fluid overload</li>
+                        <li>morbidly obese or very low body weight patients</li>
+                    </ul>
+                </li>
+                <li>This calculator is not for use in critically ill patients with severe sepsis, who may require higher
+                    doses</li>
+                <li>This calculator is not for use paediatric patients &lt; 12 years old</li>
+                <li>A loading dose of vancomycin may be considered to help achieve a therapeutic concentration more
+                    quickly, particularly in patients with serious infections who are critically ill. However, there are
+                    no strong clinical data to show that this approach improves outcomes.</li>
+                <li>This calculator aims for a load of 25 to 30 mg/kg (actual body weight)</li>
+            </ul>
+        </div>
+        <!--/vanc load body content-->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose7 -->
+
+    <!-- Start of half life nomogram page #dose10 -->
+    <div data-role="page" id="dose10" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Antibiotic half lives for surgery</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <br><br>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr bgcolor="#F2F3F4">
+                        <th>Antibiotic</th>
+                        <th>Average Half-Life &#40;in Normal Adult Patient&#41;</th>
+                        <th>Elapsed Time before Second Dose Required</th>
+                    </tr>
+                    <tr bgcolor="#D6EAF8">
+                        <td colspan="3"><b>Second dose required if surgery delayed/prolonged > 3 hours</b></td>
+                    </tr>
+                    <tr bgcolor="#D6EAF8">
+                        <td>Benzyl Penicillin</td>
+                        <td>0.3 – 0.8 hours</td>
+                        <td>2 hours</td>
+                    </tr>
+                    <tr bgcolor="#D6EAF8">
+                        <td>Flucloxacillin</td>
+                        <td>0.75 – 1.5 hours</td>
+                        <td>3 hours</td>
+                    </tr>
+                    <tr bgcolor="#D6EAF8">
+                        <td>Cefazolin</td>
+                        <td>1.8 hours</td>
+                        <td>3 hours</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td colspan="3"><b>Second dose may not be required if surgery delayed/prolonged &gt; 3 hours
+                                &#9784;</b></td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Piperacillin/tazobactam</td>
+                        <td>1 – 6 hours</td>
+                        <td>2 – 12 hours &#9784;</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Clindamycin</td>
+                        <td>1.5 – 5 hours</td>
+                        <td>3 to 4 hours &#9784;</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Ciprofloxacin</td>
+                        <td>4 hours</td>
+                        <td>8 hours &#9784;</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Vancomycin</td>
+                        <td>4 – 6 hours</td>
+                        <td>8 hours &#9784;</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Metronidazole</td>
+                        <td>6 - 7 hours</td>
+                        <td>12 hours &#9784;</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Teicoplanin</td>
+                        <td>90 – 157 hours</td>
+                        <td>Not required</td>
+                    </tr>
+                    <tr bgcolor="#EAFAF1">
+                        <td>Gentamicin</td>
+                        <td>2 hours - NB/ despite having a short half-life a second dose of gentamicin should never be
+                            given within 24 hours due to the potential for nephrotoxicity and ototoxicity with this
+                            agent
+                            If the operation is expected to be extended then a higher initial dose (up to 5mg/Kg)
+                            gentamicin should be given .</td>
+                        <td>No second dose to be given</td>
+                    </tr>
+                </table>
+                <ul class="list-unstyled">
+                    <li>&#9784; Please contact pharmacy if uncertain whether to give a second dose. Typically patients
+                        with poor renal function won’t require a second dose as there will be higher levels of
+                        antibiotic remaining in their system. Young fit patients are more likely to require a second
+                        dose as they will clear the drug more quickly. Patients with significant blood loss during
+                        surgery will also require a second dose</li>
+            </div>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See the surgical antibiotic prophylaxis</a> - Therapeutic Guideline Group,
+                    Melbourne</span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose10 -->
+
+    <!-- Start of half life nomogram page #dose11 -->
+    <div data-role="page" id="dose11" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Oral Equivalents Table</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <br>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr bgcolor="#F2F3F4">
+                        <th colspan="4">Oral Alternatives to Intravenous Medicines</th>
+                    </tr>
+                    <tr bgcolor="#F2F3F4">
+                        <th colspan="2" bgcolor="#e6e6ff">Intravenous</th>
+                        <th colspan="2" bgcolor="#e5ecff">Oral</th>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff"><b>Antimicrobial Agent and Usual Adult Dose</b></td>
+                        <td bgcolor="#e6e6ff"><b>Daily Cost</b></td>
+                        <td bgcolor="#e5ecff"><b>Antimicrobial Agent and Usual Adult Dose</b></td>
+                        <td bgcolor="#e5ecff"><b>Daily Cost</b></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Amoxicillin 1-2g Q6H</td>
+                        <td bgcolor="#e6e6ff">$4.79 - $9.58</td>
+                        <td bgcolor="#e5ecff">Amoxicillin 500mg-1g Q8H</td>
+                        <td bgcolor="#e5ecff">16c-49c</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" bgcolor="#e6e6ff">Azithromycin 500mg Daily</td>
+                        <td rowspan="2" bgcolor="#e6e6ff">$5.67</td>
+                        <td bgcolor="#e5ecff">Azithromycin 500mg Daily</td>
+                        <td bgcolor="#e5ecff">$2.69</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e5ecff">Roxithromycin 300mg Daily</td>
+                        <td bgcolor="#e5ecff">57c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Benzyl penicillin 1.2g Q6H</td>
+                        <td bgcolor="#e6e6ff">$24.34</td>
+                        <td bgcolor="#e5ecff">Amoxicillin 500mg-1 gm Q8H</td>
+                        <td bgcolor="#e5ecff">16c-49c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff" rowspan="3">Ceftriaxone 1-2g Daily</td>
+                        <td bgcolor="#e6e6ff" rowspan="3">88c</td>
+                        <td bgcolor="#e5ecff">For COAD exacerbation - Amoxicillin 500mg oral Q8H (&#8706;)</td>
+                        <td bgcolor="#e5ecff">16c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e5ecff">For Community Acquired Pneumonia - Amoxicillin 1g Q8H (&#8706;)</td>
+                        <td bgcolor="#e5ecff">49c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e5ecff">For Hospital Acquired or Aspiration Pneumonia,<br> Abdominal Sepsis and
+                            UTI <br>- Amoxicillin/Clavulanic Acid 875mg/125mg Q12H (&#8706;)(&#8709;)</td>
+                        <td bgcolor="#e5ecff">40c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Cefazolin 1-2g Q8H</td>
+                        <td bgcolor="#e6e6ff">$4.35</td>
+                        <td bgcolor="#e5ecff">Cefalexin 500mg Q6H</td>
+                        <td bgcolor="#e5ecff">30c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Ciprofloxacin 200-400mg Q12H</td>
+                        <td bgcolor="#e6e6ff">$15.92</td>
+                        <td bgcolor="#e5ecff">Ciprofloxacin 500-750mg Q12H</td>
+                        <td bgcolor="#e5ecff">23c – 98c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Flucloxacillin 1g Q6H</td>
+                        <td bgcolor="#e6e6ff">$5.41 - $10.82</td>
+                        <td bgcolor="#e5ecff">Flucloxacillin 500mg Q6H</td>
+                        <td bgcolor="#e5ecff">$1.20</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Fluconazole 200-400mg Daily</td>
+                        <td bgcolor="#e6e6ff">$3.45 - $6.90</td>
+                        <td bgcolor="#e5ecff">Fluconazole 200mg-400mg Daily (&#8721;)</td>
+                        <td bgcolor="#e5ecff">65c - $1.30</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Clindamycin 600-900mg Q8H</td>
+                        <td bgcolor="#e6e6ff">$81 - $162</td>
+                        <td bgcolor="#e5ecff">Clindamycin 300-600mg oral Q8H (&#8721;)</td>
+                        <td bgcolor="#e5ecff">$1.99 - $3.98</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Metronidazole 500mg Q12H</td>
+                        <td bgcolor="#e6e6ff">$3.69</td>
+                        <td bgcolor="#e5ecff">Metronidazole 400mg Q8H – Q12H (&#8721;)</td>
+                        <td bgcolor="#e5ecff">41c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#e6e6ff">Piperacillin / Tazobactam 4.5g Q8H</td>
+                        <td bgcolor="#e6e6ff">$25.69</td>
+                        <td bgcolor="#e5ecff">Amoxicillin/Clavulanic acid 875mg/125mg oral Q12H (&#8709;)</td>
+                        <td bgcolor="#e5ecff">40c</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ccf2ff">&#8706;</td>
+                        <td bgcolor="#ccf2ff" colspan="3">Ensure patient does not have penicillin allergy before
+                            changing</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ccf2ff">&#8709;</td>
+                        <td bgcolor="#ccf2ff" colspan="3">No direct oral alternative. Check microbiology and site of
+                            infection to guide choice of agent</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ccf2ff">&#8721;</td>
+                        <td bgcolor="#ccf2ff" colspan="3">Agents with excellent oral bioavailability &#40;90% or
+                            higher&#41;</td>
+                    </tr>
+                </table>
+                <ul class="list-unstyled">
+                    <li>When switching from an IV to oral route, it is not always possible or necessary to use the same
+                        antimicrobial drug. The oral switch is an opportunity to review current therapy in light of new
+                        microbiological results and/or a revised diagnosis, and change therapy to suit. Some possible IV
+                        to oral switches are given below in table 1</li>
+            </div>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose11 -->
+
+    <!-- Start of dose12 page: #dose12 -->
+    <div data-role="page" id="dose12" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Gentamicin empiric dose calculator</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <!--gentamicin dose calculator body content-->
+            <br>
+            <ul class="line30">
+                <li>
+                    This calculator is for use as a guide only. The following patient groups may have altered
+                    pharmacokinetics and modified doses may be required. Please contact infectious diseases for advice
+                    with the following:
+                    <ul class="line30">
+                        <li>critically ill patients with severe sepsis, septic shock or febrile neutropenia</li>
+                        <li>patients receiving renal replacement therapy</li>
+                        <li>patients with severe burns</li>
+                        <li>patients with cystic fibrosis</li>
+                        <li>pregnant women</li>
+                        <li>patients with ascites</li>
+                        <li>morbidly obese patients</li>
+                    </ul>
+                </li>
+                <li>This calculator is not for use in paediatric patients &lt; 18 years old</li>
+                <li>Clinical monitoring for toxicity should be undertaken in all patients, even if AUC monitoring is not
+                    required</li>
+            </ul>
+            <hr>
+            <script>
+                gcalccrcl = function () {
+                    var xgheight = parseInt($('#xgentheight').val());
+                    var xgweight = parseFloat($('#xgentweight').val());
+                    var xgcreat = parseInt($('#xgcreat').val());
+                    var xgage = parseInt($('#xgage').val());
+                    var xsepsis = parseInt($('#xsepsis').val());
+                    var xgcrcl = 0;
+                    var xgextracm = 0;
+                    var xgangen = 0;
+                    var xgentheight = parseInt($('#xgentheight').val());
+                    var xgentweight = parseFloat($('#xgentweight').val());
+                    var xgenderweight = parseFloat($('#xgenderweight').val());
+                    var xextracm = (xgentheight - 152);
+                    var xidbw = 0;
+                    var xgentdose1 = 0;
+                    var xgentdose2 = 0;
+                    var xglbw = 0;
+                    var xgmheight = parseInt($('#xgentheight').val()) / 100;
+
+                    if (xgheight <= 152) {
+                        xgextracm = 0
+                    }
+                    else if (xgheight > 152) {
+                        xgextracm = (parseInt($('#xgentheight').val()) - 152);
+                    }
+
+                    if (xgcreat < 60) {
+                        xgcreat = 60;
+                    }
+                    if (parseInt($('#xgenderweight').val()) > 47) {
+                        xgangen = 1
+                    }
+                    else if (parseInt($('#xgenderweight').val()) < 47) {
+                        xgangen = 0.85
+                    }
+                    //if actual body weight less than ideal body weight then calculate lean body weight for CrCl
+                    if (parseInt($('#xgentweight').val()) < (parseInt($('#xgenderweight').val()) + (0.9 * xgextracm))) {
+                        xidbw = parseFloat($('#xgentweight').val());
+                        xgentbw = parseFloat($('#xgentweight').val());
+                    }
+                    else if (parseInt($('#xgentweight').val()) < (parseInt($('#xgenderweight').val()) + (0.9 * xgextracm)) * 1.2) {
+                        xidbw = (parseFloat($('#xgenderweight').val()) + (0.9 * xgextracm));
+                        xgentbw = parseFloat($('#xgentweight').val());
+                    }
+                    else if (parseInt($('#xgentweight').val()) >= (parseInt($('#xgenderweight').val()) + (0.9 * xgextracm)) * 1.2) {
+                        //changed from criteria of gheight>152 here cos it seemed a bit weird to just go off height
+                        xidbw = (parseFloat($('#xgenderweight').val()) + (0.9 * xgextracm));
+                        xgentbw = xidbw + (0.4 * (xgentweight - xidbw))
+                    }
+                    if (xgage < 18) {
+                        xccrcl = 0
+                        alert("Please use the modified Schwartz equation to calculate a dose for paediatric patients. Do not use this calculator")
+                    }
+                    //changed all these to lean body weight on request from Minyon
+                    else if (xgage >= 17) {
+                        xgcrcl = Math.round(((((140 - xgage) * xidbw) / (0.814 * xgcreat)) * xgangen))
+                    }
+                    $('#xgcrcl').text(xgcrcl);
+                    if (xgcrcl > 60) {
+                        xcrcl = 1;
+                    }
+                    else if (xgcrcl >= 40 && xgcrcl <= 60) {
+                        xcrcl = 2;
+                    }
+                    else if (xgcrcl < 40) {
+                        xcrcl = 3;
+                    }
+                    if ((xidbw * 2) <= parseFloat($('#xgentweight').val())) {
+                        alert("please contact infectious diseases when dosing morbidly obese patients");
+                    }
+                    if (xgage > 70) {
+                        alert("Be careful when giving aminoglycosides to elderly patients, consider dosing at the lower dose range and keep course duration as short as possible");
+                    }
+                    //first check if pt is septic, if so then multiply by 7, otherwise 5mg dose is OK 
+                    //MADE THE ASSUMPTION THAT A 5MG/KG DOSE IS PROBS TOP DOSE IF RENAL FAILURE IN SEPSIS SO MADE IT 4-5 MG IN SEPSIS WITH RENAL FAILURE
+                    //TODO need to confirm what the max dose for non-septic patients should be. Have left as 700 as with sepsis
+                    if (xsepsis === 0) {
+                        if (xcrcl === 1) {
+                            xgentdose2 = Math.round((xgentbw * 5) / 40) * 40;
+                            $('#xduration').text("for a maximum of 3 empirical doses at 0, 24 and 48 hours");
+                        }
+                        else if (xcrcl === 2) {
+                            xgentdose2 = Math.round((xgentbw * 5) / 40) * 40;
+                            $('#xduration').text("for a maximum of 2 empirical doses at 0 and 36 hours");
+                        }
+                        else if (xcrcl === 3) {
+                            xgentdose2 = Math.round((xgentbw * 4) / 40) * 40;
+                            $('#xduration').text("for a single dose, then contact infectious diseases for subsequent dosing or for selection of an alternative agent");
+                        }
+                        if (xgentbw > 30) {
+                            xgentdose1 = Math.round((xgentbw * 4) / 40) * 40;
+                        }
+                        else if (xgentbw < 30) {
+                            alert("Please confirm weight, this calculator is for adult patients only");
+                            xgentdose2 = 0;
+                        }
+                    }
+                    else if (xsepsis === 1) {
+                        if (xcrcl === 1) {
+                            xgentdose2 = Math.round((xgentbw * 7) / 40) * 40;
+                            $('#xduration').text("for a maximum of 3 empirical doses at 0, 24 and 48 hours");
+                        }
+                        else if (xcrcl === 2) {
+                            xgentdose2 = Math.round((xgentbw * 7) / 40) * 40;
+                            $('#xduration').text("for a maximum of 2 empirical doses at 0 and 36 hours");
+                        }
+                        else if (xcrcl === 3) {
+                            xgentdose2 = Math.round((xgentbw * 7) / 40) * 40;
+                            $('#xduration').text("for a single dose, then contact infectious diseases for subsequent dosing or for selection of an alternative agent");
+                        }
+                        if (xgentbw > 30 && xcrcl != 3) {
+                            xgentdose1 = Math.round((xgentbw * 7) / 40) * 40;
+                        }
+                        else if (xgentbw > 30 && xcrcl === 3) {
+                            xgentdose1 = Math.round((xgentbw * 7) / 40) * 40;
+                        }
+                        else if (xgentbw < 30) {
+                            alert("Please confirm weight, this calculator is for adult patients only")
+                            xgentdose2 = 0;
+                        }
+                    }
+                    //cap the top dose for gent at 700mg
+                    if (xgentdose1 > 700) {
+                        xgentdose1 = 700;
+                    }
+                    if (xgentdose2 > 700) {
+                        xgentdose2 = 700;
+                    }
+                    xgentbw = Math.round(xgentbw);
+                    $('#xgentbw').text(xgentbw);
+                    $('#xgcrcl').text(xgcrcl);
+                    $('#xidbw').text(xidbw);
+                    $('#xgentdose1').text(xgentdose1);
+                    $('#xgentdose2').text(xgentdose2);
+                    $('#xglbw').text(xglbw);
+                };
+
+                gentClear = function () {
+                    xgheight = 0;
+                    xgentbw = 0;
+                    xgweight = 0;
+                    xgcreat = 0;
+                    xgage = 0;
+                    xgcrcl = 0;
+                    xgextracm = 0;
+                    xgangen = 0;
+                    xgentheight = 0;
+                    xgentweight = 0;
+                    xextracm = 0;
+                    xidbw = 0;
+                    xlbw = 0;
+                    xgentdose1 = 0;
+                    xgentdose2 = 0;
+                    document.getElementById("xgentForm").reset();
+                    $('#xgentbw').text(xgentbw);
+                    $('#xgcrcl').text(xgcrcl);
+                    $('#xidbw').text(xidbw);
+                    $('#xgentdose1').text(xgentdose1);
+                    $('#xgentdose2').text(xgentdose2);
+                    $('#xglbw').text(xglbw);
+                };
+            </script>
+            <form id="xgentForm" action="" onsubmit="return false">
+                <h4 class="color-primary mrgn20b">Enter the patient details to calculate the gentamicin loading dose:
+                </h4>
+                <div class="form-group">
+                    <label for="xgenderweightLabel"><b>Gender:</b></label>
+                    <select name="genderweight" id="xgenderweight" class="form-control">
+                        <option value="0">-</option>
+                        <option value="50.0">Male</option>
+                        <option value="45.5">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="xgage"><b>Age:</b></label>
+                    <input type="number" min="15" id="xgage" name="gage" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="gentheight"><b>Height (cm):</b></label>
+                    <input type="number" min="10" id="xgentheight" name="gentheight" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="xgentweight"><b>Actual weight (kg):</b></label>
+                    <input type="number" min="10" id="xgentweight" name="gentweight" class="form-control">
+                </div>
+                <div class="form-group"><label for="gcreat"><b>Creatinine:</b></label><input type="number" min="20"
+                        id="xgcreat" name="gcreat" class="form-control"></div>
+                <div class="form-group">
+                    <label for="sepsisLabel"><b>Does the patient have severe sepsis or febrile neutropenia?</b></label>
+                    <select name="sepsis" id="xsepsis" class="form-control">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+                <p><b>Gentamicin dose weight used &#40;Adjusted body weight is used if patient over 120% of IBW&#41;:
+                    </b><strong><span id="xgentbw">0</span></strong> <b>Kg</b></p>
+                <p><b>Creatinine clearance calculated for this dose: </b><strong><span id="xgcrcl">0</span></strong>
+                    <b>mL/min</b></p>
+                <br>
+                <p><b>Gentamicin dose: </b><strong><span id="xgentdose1">0</span></strong> <b>mg</b> to <strong><span
+                            id="xgentdose2">0</span></strong> <b>mg</b> <span id="xduration"> </span></p>
+                <button onclick="gcalccrcl();" class="btn btn-primary">Calculate</button>
+                <button onclick="gentClear();" class="btn btn-primary">Clear</button>
+            </form>
+            <hr>
+        </div>
+        <!--/gentamicin dose calculator body content-->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /dose12 -->
+    <!--END OF THE DOSE CALCULATORS-->
+
+    <!-- /END OF DOSING NOMOGRAMS -->
+
+</body>
+<script src="bootstrap/js/script.js"></script>
+<script src="bootstrap/js/test.js"></script>
+<script src="bootstrap/js/email.js"></script>
+
+</html>

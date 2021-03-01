@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAAMS - Western Australia AntiMicrobial Stewardship</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/basic.css" />
+    <link rel="stylesheet" href="bootstrap/css/style.css" />
+    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/codecheckWA.js"></script>
+    <!-- Needed for Forms Feature Detection -->
+    <script src="polyfill/better-dom.min.js"></script>
+    <!-- Needed for Validation -->
+    <script src="polyfill/better-dateinput-polyfill.js"></script>
+    <script src="polyfill/ie-array-polyfill.js"></script>
+    <!-- General helpful functions -->
+    <script src="bootstrap/js/kraken.js"></script>
+</head>
+
+<body>
+
+    <!-- loading page -->
+    <div data-role="page" id="load" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Loading</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Loading</span>
+            </h3>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /load -->
+
+    <!-- START of ACUTE MASTOIDITIS treatment maze -->
+    <!-- Start of ACUTE MASTOIDITIS ?PEN -->
+    <div data-role="page" id="mastoid" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have a penicillin allergy?</span>
+                <span class="font15">&#40;See below for details on penicillin allergy severity&#41;</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#mastoid1">No penicillin allergy</a></li>
+                <li><a href="#mastoid2">Non-severe immediate or delayed penicillin hypersensitivity</a></li>
+                <li><a href="#mastoid3">Severe immediate or delayed penicillin hypersensitivity</a></li>
+            </ul>
+            <hr />
+            <h4 class="color-primary"> History of penicillin allergy or adverse reaction</h4>
+            <p class="bold">No penicillin allergy</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as nausea and limited diarrhoea</li>
+                <li>Such reactions are frequently not replicable or generalizable to the whole class. It is safe to
+                    prescribe penicillin class antibiotics &#40;with the patient’s knowledge&#41;, and if required, use
+                    strategies for symptom control such as metoclopramide</li>
+            </ul>
+            <p class="bold">Non-severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as isolated rash.</li>
+                <li>There is only a 2-3% chance of cephalosporin allergy in a patient with a previous IgE mediated
+                    allergy to penicillin, and probably even less for other types of allergies. In most cases it is safe
+                    to administer a cephalosporin to a patient who has had a non-life threatening reaction to penicillin
+                </li>
+            </ul>
+            <p class="bold">Severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes anaphylaxis &#40;see below&#41; BUT DOES NOT INCLUDE other life-threatening reactions
+                    such as Stevens-Johnson Syndrome &#40;SJS&#41;, Toxic epidermal necrolysis &#40;TEN&#41;, Drug
+                    reaction with eosinophilia and systemic symptoms &#40;DRESS&#41; or interstitial nephritis. If your
+                    patient has a history of these, contact infectious diseases for advice</li>
+            </ul>
+            <hr>
+            <p class="bold">Penicillin anaphylaxis is highly likely if any ONE of the following is fulfilled:</p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>1.</b> Acute onset of an illness (minutes to several hours)
+                        involving the skin, mucosal tissue, or both (eg, generalised hives, pruritus or flushing,
+                        swollen lips-tongue-uvula) <b>and at least one of:</b></div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze/bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <b>OR</b>
+                            <li>Reduced blood pressure &#40;BP&#41; or associated symptoms and signs of end-organ
+                                malperfusion &#40;eg, hypotonia [collapse] syncope, incontinence&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>2. TWO OR MORE OF THE FOLLOWING</b> that occur rapidly
+                        <i>after exposure</i> to penicillin for that patient &#40;within minutes to several hours&#41;:
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Involvement of the skin-mucosal tissue &#40;eg, generalized hives, itch-flush, swollen
+                                lips-tongue-uvula&#41;.</li>
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze-bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <li>Reduced BP or associated symptoms &#40;eg, hypotonia [collapse], syncope,
+                                incontinence&#41;.</li>
+                            <li>Persistent gastrointestinal symptoms and signs &#40;eg, crampy abdominal pain,
+                                vomiting&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>3.</b> Reduced BP after exposure to penicillin in a patient
+                        with known penicillin allergy &#40;within minutes to several hours&#41;
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Reduced BP in adults is defined as a systolic BP of less than 90 mmHg or greater than 30
+                                percent decrease from that person's baseline</li>
+                            <li>In infants and children, reduced BP is defined as low systolic BP &#40;age-specific&#41;
+                                or greater than 30 percent decrease in systolic BP</li>
+                            <ul class="circle">
+                                <li>i.e. Less than 70 mmHg from 1 month up to 1 year</li>
+                                <li>Less than &#40;70 mmHg + [2 x age]&#41; from 1 to 10 years</li>
+                                <li>Less than 90 mmHg from 11 to 17 years</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid -->
+
+    <!-- Start of ACUTE MASTOIDITIS NO PEN ?PSEUD RISK -->
+    <div data-role="page" id="mastoid1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Does the patient have any risk factors for <i>Pseudamonus aeruginosa</i> infection? &#40;See below&#41;</h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#mastoid1a">Yes</a></li>
+                <li><a href="#mastoid1b">No</a></li>
+            </ul>
+        </div>
+        <hr />
+        <ul class="line30">
+            <li><i>Pseudomonas aeruginosa</i> is commonly cultured from samples taken through the external auditory canal; this usually represents external auditory canal flora rather than infection. The results of culture from mastoid cavity samples are more likely to indicate the pathogen.</li>
+            <li>Treatment with a regimen containing anti-pseudomonal activity are recommended if:</li>
+            <ul class="circle">
+                <li>The patient is an Aboriginal and Torres Strait Islander child with a history of chronic suppurative otitis media or recurrent acute otitis media</li>
+                <li><i>P. aeruginosa</i> is isolated in samples taken from the mastoid cavity</li>
+                <li>The child has a tympanostomy tube in situ <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+                <li>The child is immunocompromised <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+            </ul>
+        </ul>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid1 -->
+
+    <!-- Start of ACUTE MASTOIDITIS MILD PEN ?PSEUD RISK -->
+    <div data-role="page" id="mastoid2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Does the patient have any risk factors for <i>Pseudamonus aeruginosa</i> infection? &#40;See below&#41;</h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#mastoid2a">Yes</a></li>
+                <li><a href="#mastoid2b">No</a></li>
+            </ul>
+        </div>
+        <hr />
+        <ul class="line30">
+            <li><i>Pseudomonas aeruginosa</i> is commonly cultured from samples taken through the external auditory canal; this usually represents external auditory canal flora rather than infection. The results of culture from mastoid cavity samples are more likely to indicate the pathogen.</li>
+            <li>Treatment with a regimen containing anti-pseudomonal activity are recommended if:</li>
+            <ul class="circle">
+                <li>The patient is an Aboriginal and Torres Strait Islander child with a history of chronic suppurative otitis media or recurrent acute otitis media</li>
+                <li><i>P. aeruginosa</i> is isolated in samples taken from the mastoid cavity</li>
+                <li>The child has a tympanostomy tube in situ <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+                <li>The child is immunocompromised <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+            </ul>
+        </ul>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid2 -->
+
+    <!-- Start of ACUTE MASTOIDITIS BAD PEN ?PSEUD RISK -->
+    <div data-role="page" id="mastoid3" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Does the patient have any risk factors for <i>Pseudamonus aeruginosa</i> infection? &#40;See below&#41;</h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#mastoid3a">Yes</a></li>
+                <li><a href="#mastoid3b">No</a></li>
+            </ul>
+        </div>
+        <hr />
+        <ul class="line30">
+            <li><i>Pseudomonas aeruginosa</i> is commonly cultured from samples taken through the external auditory canal; this usually represents external auditory canal flora rather than infection. The results of culture from mastoid cavity samples are more likely to indicate the pathogen.</li>
+            <li>Treatment with a regimen containing anti-pseudomonal activity are recommended if:</li>
+            <ul class="circle">
+                <li>The patient is an Aboriginal and Torres Strait Islander child with a history of chronic suppurative otitis media or recurrent acute otitis media</li>
+                <li><i>P. aeruginosa</i> is isolated in samples taken from the mastoid cavity</li>
+                <li>The child has a tympanostomy tube in situ <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+                <li>The child is immunocompromised <b>and</b> <i>P. aeruginosa</i> was isolated in recent samples (including samples taken through the external auditory canal)</li>
+            </ul>
+        </ul>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid3 -->
+
+    <!-- Start of ACUTE MASTOIDITIS NO PEN ALLERGY, YES PSEUD -->
+    <div data-role="page" id="mastoid1a" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has no penicillin allergy and risk factors for <i>Pseudomonas aeruginosa</i> infection give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Piperacillin+tazobactam 100+12.5 mg/kg up to 4+0.5 g intravenously, 6-hourly</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If <i>Pseudomonas aeruginosa</i> is identified by culture and the isolate is susceptible to ciprofloxacin use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple"> ciprofloxacin 20 mg/kg up to 750 mg orally, 12-hourly for a total duration of therapy (IV + oral) of 12-15 days (depending on clinical progress)</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Piperacillin + tazobactam IV is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Ciprofloxacin PO is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>If a pathogen is not identified, switch to an appropriate narrower-spectrum empirical regimen (see treatment options for patients without <i>Pseudomonas</i> infection)</li>
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an adverse effect on cartilage development with quinolone use; however, there are few data from human trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice</li>
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid1a -->
+
+    <!-- Start of ACUTE MASTOIDITIS NO PEN ALLERGY, NO PSEUD -->
+    <div data-role="page" id="mastoid1b" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has no penicillin allergy give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Cefotaxime 50 mg/kg up to 2 g intravenously, 8-hourly</span>
+                </h4>
+                <p class="mrgn20b"><b>OR,</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Ceftriaxone (child 1 month or older) 50 mg/kg up to 2 g intravenously, daily</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If no pathogen is identified on microbiology use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple"> Amoxicillin+clavulanate 22.5+3.2 mg/kg up to 875+125 mg orally, 12-hourly for a total duration of therapy (IV + oral) of 12-15 days (depending on clinical progress)</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ceftriaxone or cefotaxime is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid1b -->
+
+    <!-- Start of ACUTE MASTOIDITIS MILD PEN ALLERGY, YES PSEUD -->
+    <div data-role="page" id="mastoid2a" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has non-severe penicillin allergy and risk factors for <i>Pseudomonas aeruginosa</i> infection give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ceftazidime 50 mg/kg up to 2 g intravenously, 8-hourly</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If <i>Pseudomonas aeruginosa</i> is identified by culture and the isolate is susceptible to ciprofloxacin use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 20 mg/kg up to 750 mg orally, 12-hourly for a total duration of therapy (IV + oral) of 12-15 days (depending on clinical progress)</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Ceftazidime IV is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Ciprofloxacin PO is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>If a pathogen is not identified, switch to an appropriate narrower-spectrum empirical regimen (see treatment options for patients without <i>Pseudomonas</i> infection)</li>
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an adverse effect on cartilage development with quinolone use; however, there are few data from human trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice</li>
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid2a -->
+
+    <!-- Start of ACUTE MASTOIDITIS MILD PEN ALLERGY, NO PSEUD -->
+    <div data-role="page" id="mastoid2b" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has non-severe penicillin allergy give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Cefotaxime 50 mg/kg up to 2 g intravenously, 8-hourly</span>
+                </h4>
+                <p class="mrgn20b"><b>OR,</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Ceftriaxone (child 1 month or older) 50 mg/kg up to 2 g intravenously, daily</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If no pathogen is identified on microbiology use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple"> Cefuroxime (child 3 months or older) 15 mg/kg up to 500 mg orally, 12-hourly</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ceftriaxone or cefotaxime is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for cefuroxime is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid2b -->
+
+    <!-- Start of ACUTE MASTOIDITIS BAD PEN ALLERGY, YES PSEUD -->
+    <div data-role="page" id="mastoid3a" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has non-severe penicillin allergy and risk factors for <i>Pseudomonas aeruginosa</i> infection give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Meropenem 20 mg/kg up to 1 g intravenously, 8-hourly</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If <i>Pseudomonas aeruginosa</i> is identified by culture and the isolate is susceptible to ciprofloxacin use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 20 mg/kg up to 750 mg orally, 12-hourly for a total duration of therapy (IV + oral) of 12-15 days (depending on clinical progress)</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Meropenem is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Ciprofloxacin PO is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>If a pathogen is not identified, switch to an appropriate narrower-spectrum empirical regimen (see treatment options for patients without <i>Pseudomonas</i> infection)</li>
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an adverse effect on cartilage development with quinolone use; however, there are few data from human trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice</li>
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid3a -->
+
+    <!-- Start of ACUTE MASTOIDITIS BAD PEN ALLERGY, NO PSEUD -->
+    <div data-role="page" id="mastoid3b" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute mastoiditis in children</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If the patient has severe penicillin allergy give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Vancomycin IV, dosed as per the nomogram below</span>
+                </h4>
+            </div>
+            <br/>
+            <p class="mrgn20b"><b>THEN,</b> following a minimum of <b>FIVE</b> days of antibiotic therapy, switch to oral. If no pathogen is identified on microbiology use:</p>
+            <br>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Azithromycin 10 mg/kg up to 500 mg orally for a total duration of therapy (IV + oral) of 12-15 days (depending on clinical progress)</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for vancomycin is:</span>
+                <span class="font15 bold"> 7<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>SEVEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past one week. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for Azithromycin PO is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>mas</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>Management of acute mastoiditis in children requires initial intravenous antibiotic therapy, and consultation with an otolaryngologist for consideration of aspiration and drainage of the middle ear, or mastoidectomy. Collect samples from the middle ear and, if possible, the mastoid cavity for culture and susceptibility testing</li>
+                <li>See the Australian Therapeutic Guidelines Antibiotic for instructions on when to make the IV to oral switch</li>
+                <li>Children with intracranial complications may require a longer duration of therapy—contact infectious diseases for advice</li>
+                <li>Acute mastoiditis is most common in children younger than 2 years of age, but complications of acute mastoiditis are more frequent in children 2 years or older. Complications of mastoiditis include subperiosteal, subcutaneous, intratemporal or intracranial collections, and facial nerve palsy</li>
+                <li>For the management of children with intracranial complications, such as meningitis, seek expert advice</li>
+            </ul>
+            <hr/>
+            <h4 class="color-primary mrgn20b">Vancomycin Dosing in Paediatrics</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <th class="darkbackcolour" colspan="2">Age</th>
+                        <th class="darkbackcolour">Starting Dose <br>&#40;use actual body weight&#41;</th>
+                        <th class="darkbackcolour">Dosing <br>frequency</th>
+                        <th class="darkbackcolour">Timing of first <br>trough concentration</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Neonates &lt; 30 weeks<br> postmenstrual age &#40;NB1&#41;</td>
+                        <td>postnatal age<br> 0 to 14 days</td>
+                        <td>15 mg/kg</td>
+                        <td>18-hourly</td>
+                        <td>Before the second dose</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age <br>14 days or older</td>
+                        <td>15 mg/kg</td>
+                        <td>12-hourly</td>
+                        <td>Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour" rowspan="2">Neonates 30 to 36 weeks<br> postmenstrual age
+                            &#40;NB1&#41;</td>
+                        <td class="bluebackcolour">postnatal age <br>0 to 14 days</td>
+                        <td class="bluebackcolour">15 mg/kg</td>
+                        <td class="bluebackcolour">12-hourly</td>
+                        <td class="bluebackcolour">Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour">postnatal age <br>14 days or older</td>
+                        <td class="bluebackcolour">15 mg/kg</td>
+                        <td class="bluebackcolour">8-hourly</td>
+                        <td class="bluebackcolour">Before the fourth dose</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Neonates 37 to 44 weeks<br> postmenstrual age &#40;NB1&#41;</td>
+                        <td>postnatal age<br> 0 to 7 days</td>
+                        <td>15 mg/kg</td>
+                        <td>12-hourly</td>
+                        <td>Before the third dose</td>
+                    </tr>
+                    <tr>
+                        <td>postnatal age <br>7 days or older</td>
+                        <td>15 mg/kg</td>
+                        <td>8-hourly</td>
+                        <td>Before the fourth dose</td>
+                    </tr>
+                    <tr>
+                        <td class="bluebackcolour" colspan="2">Infants and children &#40;NB2&#41;</td>
+                        <td class="bluebackcolour">15 mg/kg up to 750 mg</td>
+                        <td class="bluebackcolour">6-hourly</td>
+                        <td class="bluebackcolour">Before the fifth dose</td>
+                    </tr>
+                </table>
+                <ul class="line30">
+                    <li><b>NB1</b>- Postmenstrual age is the time elapsed between the first day of the last menstrual
+                        period and birth (gestational age) plus the time elapsed after birth (postnatal age)</li>
+                    <li><b>NB2</b>- The Therapeutic Guidelines gives an alternative 12-hourly dosing in this group;
+                        however local NT data support using 6-hourly dosing in all children up to 12 years</li>
+                </ul>
+            </div>
+            <ol type="1" class="line30">
+                <li>Vancomycin should be administered at a maximum rate of 10 mg/min to avoid <span
+                        class="color-danger bold">Red Person</span> Syndrome</li>
+                <li>"Trough" levels are taken within 60 minutes of the next dose. If a loading dose is given then it is
+                    considered the first dose</li>
+                <li>In patients with CrClr &lt; 20 mL/min, the clinical context (e.g haemodialysis) determines whether
+                    the next dose is given before the trough concentration is available or withheld until the result is
+                    known</li>
+            </ol>
+            <hr />
+            <ul class="line30">
+                <li>Please contact infectious diseases within 48 hours of initiating therapy with vancomycin</li>
+                <li>Watch baseline creatinine closely while treating a patient with vancomycin. An increase from
+                    baseline creatinine will almost always result in an increase in vancomycin concentration as
+                    vancomycin is 40-100% renally cleared. A sudden dramatic increase in creatinine should always prompt
+                    an immediate vancomycin level prior to the next dose, witholding the next dose until the level is
+                    available.</li>
+                <li>If a dose is missed or delayed within 48 hours of taking a level please contact pharmacy for
+                    interpretation of trough levels as vancomycin will not have reached steady state</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute mastoiditis in children</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /mastoid3b -->
+
+    <!--END OF ACUTE MASTOIDITIS TREATMENT MAZE-->
+
+    <!-- START of Epiglottitis treatment maze -->
+    <!-- Start of epigl page: penicillin Q? #epigl -->
+    <div data-role="page" id="epigl" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Epiglottitis</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have a penicillin allergy?</span>
+                <span class="font15">&#40;See below for details on penicillin allergy severity&#41;</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#epigl1">No penicillin allergy</a></li>
+                <li><a href="#epigl1">Non-severe immediate or delayed penicillin hypersensitivity</a></li>
+                <li><a href="#epigl2">Severe immediate or delayed penicillin hypersensitivity</a></li>
+            </ul>
+            <hr />
+            <h4 class="color-primary"> History of penicillin allergy or adverse reaction</h4>
+            <p class="bold">No penicillin allergy</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as nausea and limited diarrhoea</li>
+                <li>Such reactions are frequently not replicable or generalizable to the whole class. It is safe to
+                    prescribe penicillin class antibiotics &#40;with the patient’s knowledge&#41;, and if required, use
+                    strategies for symptom control such as metoclopramide</li>
+            </ul>
+            <p class="bold">Non-severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as isolated rash.</li>
+                <li>There is only a 2-3% chance of cephalosporin allergy in a patient with a previous IgE mediated
+                    allergy to penicillin, and probably even less for other types of allergies. In most cases it is safe
+                    to administer a cephalosporin to a patient who has had a non-life threatening reaction to penicillin
+                </li>
+            </ul>
+            <p class="bold">Severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes anaphylaxis &#40;see below&#41; BUT DOES NOT INCLUDE other life-threatening reactions
+                    such as Stevens-Johnson Syndrome &#40;SJS&#41;, Toxic epidermal necrolysis &#40;TEN&#41;, Drug
+                    reaction with eosinophilia and systemic symptoms &#40;DRESS&#41; or interstitial nephritis. If your
+                    patient has a history of these, contact infectious diseases for advice</li>
+            </ul>
+            <hr>
+            <p class="bold">Penicillin anaphylaxis is highly likely if any ONE of the following is fulfilled:</p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>1.</b> Acute onset of an illness (minutes to several hours)
+                        involving the skin, mucosal tissue, or both (eg, generalised hives, pruritus or flushing,
+                        swollen lips-tongue-uvula) <b>and at least one of:</b></div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze/bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <b>OR</b>
+                            <li>Reduced blood pressure &#40;BP&#41; or associated symptoms and signs of end-organ
+                                malperfusion &#40;eg, hypotonia [collapse] syncope, incontinence&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>2. TWO OR MORE OF THE FOLLOWING</b> that occur rapidly
+                        <i>after exposure</i> to penicillin for that patient &#40;within minutes to several hours&#41;:
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Involvement of the skin-mucosal tissue &#40;eg, generalized hives, itch-flush, swollen
+                                lips-tongue-uvula&#41;.</li>
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze-bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <li>Reduced BP or associated symptoms &#40;eg, hypotonia [collapse], syncope,
+                                incontinence&#41;.</li>
+                            <li>Persistent gastrointestinal symptoms and signs &#40;eg, crampy abdominal pain,
+                                vomiting&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>3.</b> Reduced BP after exposure to penicillin in a patient
+                        with known penicillin allergy &#40;within minutes to several hours&#41;
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Reduced BP in adults is defined as a systolic BP of less than 90 mmHg or greater than 30
+                                percent decrease from that person's baseline</li>
+                            <li>In infants and children, reduced BP is defined as low systolic BP &#40;age-specific&#41;
+                                or greater than 30 percent decrease in systolic BP</li>
+                            <ul class="circle">
+                                <li>i.e. Less than 70 mmHg from 1 month up to 1 year</li>
+                                <li>Less than &#40;70 mmHg + [2 x age]&#41; from 1 to 10 years</li>
+                                <li>Less than 90 mmHg from 11 to 17 years</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /epigl -->
+
+    <!-- Start of EPIGL Penicillin OK or mild allergy : #epigl1 -->
+    <div data-role="page" id="epigl1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Epiglottitis</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Epiglottitis treatment:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Ceftriaxone 1 g &#40;child 1 month or
+                        older: 50 mg/kg up to 1 g&#41; IV, daily for 5 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR, </b> if child &lt; 2 months old</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Cefotaxime 50 mg/kg IV, 8-hourly for
+                        5 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND, </b> consider the addition of:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Dexamethasone 10 mg &#40;child: 0.15 mg/kg up to 10 mg&#41; IV, as a
+                        single dose; repeat at 24 hours if required. </span>
+                </h4>
+            </div>
+            <br>
+            <div id="backcolour">
+                <p class="mrgn20b">if the patient has septic shock or severe disease increase the ceftriaxone dose above
+                    to:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple"> Ceftriaxone 1 g &#40;child 1 month or older: 50 mg/kg up to 1 g&#41; IV,
+                        12-hourly</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ceftriaxone or cefotaxime is:</span>
+                <span class="font15 bold"> 5<script> document.write(getCode())</script>epg</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>FIVE</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past 5 days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>The addition of corticosteroids to reduce airway inflammation is controversial but widespread</li>
+                <li>Treatment of acute epiglottitis requires airway maintenance. All patients require intensive
+                    monitoring. Seek expert advice from ENT or infectious diseases.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on epiglottitis</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /epigl1 -->
+
+    <!-- Start of epiglottitis PEN BAD: #epigl2 -->
+    <div data-role="page" id="epigl2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship">
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Epiglottitis treatment</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content" class="container-fluid">
+            <h4 class="color-primary mrgn15b">For epiglottitis in a patient with life threatening penicillin
+                hypersensitivity:</h4>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple"> Moxifloxacin 400 mg &#40;child 1 month or older: 10 mg/kg up to 400mg
+                        g&#41; IV, daily</span>
+                </h4>
+                <p class="mrgn20b"><b>AND, </b> consider the addition of:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Dexamethasone 10 mg &#40;child: 0.15 mg/kg up to 10 mg&#41; IV, as a
+                        single dose; repeat at 24 hours if required. </span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for moxifloxacin is:</span>
+                <span class="font15 bold"> 5<script> document.write(getCode())</script>epg</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>FIVE</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past 5 days. Please annotate this code on the medication chart and document when infectious
+                    diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <ul class="line30">
+                <li>The addition of corticosteroids to reduce airway inflammation is controversial but widespread</li>
+                <li>Treatment of acute epiglottitis requires airway maintenance. All patients require intensive
+                    monitoring. Seek expert advice from ENT or infectious diseases.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on epiglottitis</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /epigl2 -->
+
+    <!--END OF EPIGLOTTITIS MAZE-->
+
+
+    <!-- start of OTITIS MEDIA treatment maze -->
+    <!-- Start of otitis page: -->
+    <div data-role="page" id="otitis" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis infection</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have otitis media or externa? &#40;see below&#41;</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis1">Otitis media</a></li>
+                <li><a href="#otitis2">Acute diffuse otitis externa</a></li>
+            </ul>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Acute diffuse otitis externa &#40;swimmers ear&#41; typically presents with ear pain, pruritus and
+                    hearing loss. There may also be tenderness on manipulation of the tragus or auricle, and discharge
+                    may be present. In more severe cases, there may be regional lymphadenitis, or cellulitis of the
+                    pinna and adjacent skin.</li>
+
+            </ul>
+
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis -->
+
+    <!-- Start of otitis page: ?severe -->
+    <div data-role="page" id="otitis2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute diffuse otitis externa</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">How severe is the infection? &#40;see below&#41;</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis2a">Mild to moderate</a></li>
+                <li><a href="#otitis2b">Severe</a></li>
+            </ul>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Severe cases of acute diffuse bacterial acute diffuse otitis externa present with intense pain and
+                    complete occlusion of the external ear canal. Fever and extension of infection beyond the ear canal
+                    may also occur. In any case with associated fever treat as severe acute diffuse otitis externa</li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2 -->
+
+
+    <!-- Start of otitis page: mild/moderate ?fungal -->
+    <div data-role="page" id="otitis2a" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Acute diffuse otitis externa</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have suspected fungal infection?</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis2a1">Yes</a></li>
+                <li><a href="#otitis2a2">No</a></li>
+            </ul>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2a -->
+
+
+    <!-- Start of Otitis page : mild to moderate otitis externa without fungus -->
+    <div data-role="page" id="otitis2a2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Mild to moderate acute diffuse otitis externa without fungal infection:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If there is unlikely to be fungal infection give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Dexamethasone+framycetin+gramicidin
+                        0.05%+0.5%+0.005% ear drops, 3 drops instilled into the affected ear, 3 times daily for 7
+                        days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flumethasone+clioquinol 0.02%+1% ear
+                        drops, 3 drops instilled into the affected ear, twice daily for 7 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b> if the patient has a perforated tympanic membrane, you may replace the
+                    framycetin drops above with:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin+hydrocortisone 0.2%+1% ear drops 3 drops instilled into the
+                        affected ear, twice daily for 7 days</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>If possible, avoid products containing an aminoglycoside (eg framycetin, neomycin) in patients with
+                    a perforated tympanic membrane or a tympanostomy tube in situ because of the risk of inner ear
+                    damage</li>
+                <li>If ear drops cannot be instilled because the canal is occluded, inserting a wick into the occluded
+                    ear canal can facilitate ear drop administration</li>
+                <li>Advise the patient to keep the ear dry during and for 2 weeks after treatment. This can be achieved
+                    by using earplugs (although canal tenderness may limit their use) or a shower or bathing cap during
+                    showering and swimming</li>
+                <li>If aminoglycoside-containing products cannot be avoided, they can be used with caution because
+                    treatment is of short duration</li>
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+                <li>Instil combination corticosteroid and antimicrobial ear drops after performing dry aural toilet</li>
+                <li>After ear drops are instilled, apply gentle pressure to the tragus (by pressing on it repeatedly
+                    without causing pain) for 30 seconds</li>
+                <li>It is not necessary to routinely perform culture to guide antimicrobial therapy in non-severe cases
+                    of acute diffuse otitis externa</li>
+                <li>If symptoms persist despite appropriate acute diffuse otitis externa treatment, consider
+                    noninfectious causes such as contact dermatitis, atopic dermatitis or seborrhoeic dermatitis</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on Acute diffuse otitis externa</a> - Antibiotic Expert Groups.
+                    Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019.
+                </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2a1 -->
+
+    <!-- Start of Otitis page : mild to moderate otitis externa with fungus -->
+    <div data-role="page" id="otitis2a1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Mild to moderate acute diffuse otitis externa with fungal infection:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If there is likely to be fungal infection give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flumethasone+clioquinol 0.02%+1% ear
+                        drops, 3 drops instilled into the affected ear, twice daily for 7 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple">
+                        Triamcinolone+neomycin+gramicidin+nystatin 0.1%+0.25%+0.025%+100 000 units/mL ear drops, 3 drops
+                        instilled into the affected ear, 3 times daily for 3 to 7 days</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>If possible, avoid products containing an aminoglycoside (eg framycetin, neomycin) in patients with
+                    a perforated tympanic membrane or a tympanostomy tube in situ because of the risk of inner ear
+                    damage</li>
+                <li>Advise the patient to keep the ear dry during and for 2 weeks after treatment. This can be achieved
+                    by using earplugs (although canal tenderness may limit their use) or a shower or bathing cap during
+                    showering and swimming</li>
+                <li>If ear drops cannot be instilled because the canal is occluded, inserting a wick into the occluded
+                    ear canal can facilitate ear drop administration</li>
+                <li>If aminoglycoside-containing products cannot be avoided, they can be used with caution because
+                    treatment is of short duration</li>
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+                <li>Instil combination corticosteroid and antimicrobial ear drops after performing dry aural toilet</li>
+                <li>After ear drops are instilled, apply gentle pressure to the tragus (by pressing on it repeatedly
+                    without causing pain) for 30 seconds</li>
+                <li>It is not necessary to routinely perform culture to guide antimicrobial therapy in non-severe cases
+                    of acute diffuse otitis externa</li>
+                <li>If symptoms persist despite appropriate acute diffuse otitis externa treatment, consider
+                    noninfectious causes such as contact dermatitis, atopic dermatitis or seborrhoeic dermatitis</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute diffuse otitis externa</a> - Antibiotic Expert Groups.
+                    Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019.
+                </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2a2 -->
+
+    <!-- Start of otitis externa page: severe, ?allergy -->
+    <div data-role="page" id="otitis2b" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Severe acute diffuse otitis externa</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have a penicillin allergy?</span>
+                <span class="font15">See below for details on penicillin allergy severity</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis2b1">No penicillin allergy</a></li>
+                <li><a href="#otitis2b2">Non-severe immediate or delayed penicillin hypersensitivity</a></li>
+                <li><a href="#otitis2b3">Severe immediate or delayed penicillin hypersensitivity</a></li>
+            </ul>
+            <hr />
+            <h4 class="color-primary"> History of penicillin allergy or adverse reaction</h4>
+            <p class="bold">No penicillin allergy</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as nausea and limited diarrhoea</li>
+                <li>Such reactions are frequently not replicable or generalizable to the whole class. It is safe to
+                    prescribe penicillin class antibiotics &#40;with the patient’s knowledge&#41;, and if required, use
+                    strategies for symptom control such as metoclopramide</li>
+            </ul>
+            <p class="bold">Non-severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as isolated rash.</li>
+                <li>There is only a 2-3% chance of cephalosporin allergy in a patient with a previous IgE mediated
+                    allergy to penicillin, and probably even less for other types of allergies. In most cases it is safe
+                    to administer a cephalosporin to a patient who has had a non-life threatening reaction to penicillin
+                </li>
+            </ul>
+            <p class="bold">Severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes anaphylaxis &#40;see below&#41; BUT DOES NOT INCLUDE other life-threatening reactions
+                    such as Stevens-Johnson Syndrome &#40;SJS&#41;, Toxic epidermal necrolysis &#40;TEN&#41;, Drug
+                    reaction with eosinophilia and systemic symptoms &#40;DRESS&#41; or interstitial nephritis. If your
+                    patient has a history of these, contact infectious diseases for advice</li>
+            </ul>
+            <hr>
+            <p class="bold">Penicillin anaphylaxis is highly likely if any ONE of the following is fulfilled:</p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>1.</b> Acute onset of an illness (minutes to several hours)
+                        involving the skin, mucosal tissue, or both (eg, generalised hives, pruritus or flushing,
+                        swollen lips-tongue-uvula) <b>and at least one of:</b></div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze/bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <b>OR</b>
+                            <li>Reduced blood pressure &#40;BP&#41; or associated symptoms and signs of end-organ
+                                malperfusion &#40;eg, hypotonia [collapse] syncope, incontinence&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>2. TWO OR MORE OF THE FOLLOWING</b> that occur rapidly
+                        <i>after exposure</i> to penicillin for that patient &#40;within minutes to several hours&#41;:
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Involvement of the skin-mucosal tissue &#40;eg, generalized hives, itch-flush, swollen
+                                lips-tongue-uvula&#41;.</li>
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze-bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <li>Reduced BP or associated symptoms &#40;eg, hypotonia [collapse], syncope,
+                                incontinence&#41;.</li>
+                            <li>Persistent gastrointestinal symptoms and signs &#40;eg, crampy abdominal pain,
+                                vomiting&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>3.</b> Reduced BP after exposure to penicillin in a patient
+                        with known penicillin allergy &#40;within minutes to several hours&#41;
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Reduced BP in adults is defined as a systolic BP of less than 90 mmHg or greater than 30
+                                percent decrease from that person's baseline</li>
+                            <li>In infants and children, reduced BP is defined as low systolic BP &#40;age-specific&#41;
+                                or greater than 30 percent decrease in systolic BP</li>
+                            <ul class="circle">
+                                <li>i.e. Less than 70 mmHg from 1 month up to 1 year</li>
+                                <li>Less than &#40;70 mmHg + [2 x age]&#41; from 1 to 10 years</li>
+                                <li>Less than 90 mmHg from 11 to 17 years</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2b -->
+
+    <!-- Start of Otitis page : severe otitis externa no allergy -->
+    <div data-role="page" id="otitis2b1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Severe acute diffuse otitis externa treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">For severe acute diffuse otitis externa with no penicillin allergy give both
+                    topical and systemic therapy:</span>
+            </h3>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the topical agent use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flumethasone+clioquinol 0.02%+1% ear
+                        drops, 3 drops instilled into the affected ear, twice daily for 7 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple">
+                        Triamcinolone+neomycin+gramicidin+nystatin 0.1%+0.25%+0.025%+100 000 units/mL ear drops, 3 drops
+                        instilled into the affected ear, 3 times daily for 3 to 7 days</span>
+                </h4>
+            </div>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the systemic agents use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flucloxacillin 500 mg &#40;child:
+                        12.5 mg/kg up to 500 mg&#41; orally, 6-hourly for 7 to 10 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Cefalexin 500 mg &#40;child: 12.5
+                        mg/kg up to 500 mg&#41; orally, 6-hourly for 7 to 10 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b> with either of the above <b>ADD:</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 750 mg &#40;child: 20 mg/kg up to 750 mg&#41; orally,
+                        12-hourly for 7 to 10 days</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ciprofloxacin is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>ote</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if IV treatment is
+                    to continue past ten days. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Cefalexin is often preferred to flucloxacillin in children because the liquid formulation is better
+                    tolerated</li>
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an
+                    adverse effect on cartilage development with quinolone use; however, there are few data from human
+                    trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice.
+                </li>
+                <li>An oral liquid formulation of ciprofloxacin is not commercially available; for formulation options
+                    for children or people with swallowing difficulties, see the <a
+                        href="https://www.shpa.org.au/drtc3">Don’t Rush to Crush Handbook, published by the Society of
+                        Hospital Pharmacists of Australia</a></li>
+                <li>If possible, avoid products containing an aminoglycoside (eg framycetin, neomycin) in patients with
+                    a perforated tympanic membrane or a tympanostomy tube in situ because of the risk of inner ear
+                    damage</li>
+                <li>Advise the patient to keep the ear dry during and for 2 weeks after treatment. This can be achieved
+                    by using earplugs (although canal tenderness may limit their use) or a shower or bathing cap during
+                    showering and swimming</li>
+                <li>If ear drops cannot be instilled because the canal is occluded, inserting a wick into the occluded
+                    ear canal can facilitate ear drop administration</li>
+                <li>If aminoglycoside-containing products cannot be avoided, they can be used with caution because
+                    treatment is of short duration</li>
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+                <li>Instil combination corticosteroid and antimicrobial ear drops after performing dry aural toilet</li>
+                <li>After ear drops are instilled, apply gentle pressure to the tragus (by pressing on it repeatedly
+                    without causing pain) for 30 seconds</li>
+                <li>It is not necessary to routinely perform culture to guide antimicrobial therapy in non-severe cases
+                    of acute diffuse otitis externa</li>
+                <li>If symptoms persist despite appropriate acute diffuse otitis externa treatment, consider
+                    noninfectious causes such as contact dermatitis, atopic dermatitis or seborrhoeic dermatitis</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute diffuse otitis externa</a> - Antibiotic Expert Groups.
+                    Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019.
+                </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2b1 -->
+
+
+    <!-- Start of Otitis page : severe otitis externa bad allergy -->
+    <div data-role="page" id="otitis2b2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Severe acute diffuse otitis externa treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">For severe acute diffuse otitis externa with delayed non-severe penicillin
+                    hypersensitivity give both topical and systemic therapy:</span>
+            </h3>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the topical agent use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flumethasone+clioquinol 0.02%+1% ear
+                        drops, 3 drops instilled into the affected ear, twice daily for 7 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple">
+                        Triamcinolone+neomycin+gramicidin+nystatin 0.1%+0.25%+0.025%+100 000 units/mL ear drops, 3 drops
+                        instilled into the affected ear, 3 times daily for 3 to 7 days</span>
+                </h4>
+            </div>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the systemic agents use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Cefalexin 500 mg &#40;child: 12.5 mg/kg up to 500 mg&#41; orally,
+                        6-hourly for 7 to 10 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 750 mg &#40;child: 20 mg/kg up to 750 mg&#41; orally,
+                        12-hourly for 7 to 10 days</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ciprofloxacin is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>ote</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if IV treatment is
+                    to continue past ten days. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an
+                    adverse effect on cartilage development with quinolone use; however, there are few data from human
+                    trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice.
+                </li>
+                <li>An oral liquid formulation of ciprofloxacin is not commercially available; for formulation options
+                    for children or people with swallowing difficulties, see the <a
+                        href="https://www.shpa.org.au/drtc3">Don’t Rush to Crush Handbook, published by the Society of
+                        Hospital Pharmacists of Australia</a></li>
+                <li>If possible, avoid products containing an aminoglycoside (eg framycetin, neomycin) in patients with
+                    a perforated tympanic membrane or a tympanostomy tube in situ because of the risk of inner ear
+                    damage</li>
+                <li>Advise the patient to keep the ear dry during and for 2 weeks after treatment. This can be achieved
+                    by using earplugs (although canal tenderness may limit their use) or a shower or bathing cap during
+                    showering and swimming</li>
+                <li>If ear drops cannot be instilled because the canal is occluded, inserting a wick into the occluded
+                    ear canal can facilitate ear drop administration</li>
+                <li>If aminoglycoside-containing products cannot be avoided, they can be used with caution because
+                    treatment is of short duration</li>
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+                <li>Instil combination corticosteroid and antimicrobial ear drops after performing dry aural toilet</li>
+                <li>After ear drops are instilled, apply gentle pressure to the tragus (by pressing on it repeatedly
+                    without causing pain) for 30 seconds</li>
+                <li>It is not necessary to routinely perform culture to guide antimicrobial therapy in non-severe cases
+                    of acute diffuse otitis externa</li>
+                <li>If symptoms persist despite appropriate acute diffuse otitis externa treatment, consider
+                    noninfectious causes such as contact dermatitis, atopic dermatitis or seborrhoeic dermatitis</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on acute diffuse otitis externa</a> - Antibiotic Expert Groups.
+                    Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019.
+                </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2b2 -->
+
+
+    <!-- Start of Otitis page : severe otitis externa bad allergy -->
+    <div data-role="page" id="otitis2b3" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Severe acute diffuse otitis externa treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">For severe acute diffuse otitis externa with no penicillin allergy give both
+                    topical and systemic therapy:</span>
+            </h3>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the topical agent use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Flumethasone+clioquinol 0.02%+1% ear
+                        drops, 3 drops instilled into the affected ear, twice daily for 7 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple">
+                        Triamcinolone+neomycin+gramicidin+nystatin 0.1%+0.25%+0.025%+100 000 units/mL ear drops, 3 drops
+                        instilled into the affected ear, 3 times daily for 3 to 7 days</span>
+                </h4>
+            </div>
+            <h4 class="mrgn20b">
+                <span class="color-primary">For the systemic agents use:</span>
+            </h4>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Clindamycin 450 mg &#40;child: 10 mg/kg up to 450 mg&#41; orally,
+                        8-hourly for 7 to 10 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 750 mg &#40;child: 20 mg/kg up to 750 mg&#41; orally,
+                        12-hourly for 7 to 10 days</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for ciprofloxacin and clindamycin is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>ote</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if IV treatment is
+                    to continue past ten days. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Ciprofloxacin is not licensed for use in children on the basis of animal studies that showed an
+                    adverse effect on cartilage development with quinolone use; however, there are few data from human
+                    trials to support this finding. Ciprofloxacin can be used in children when it is the drug of choice.
+                </li>
+                <li>An oral liquid formulation of ciprofloxacin is not commercially available; for formulation options
+                    for children or people with swallowing difficulties, see the <a
+                        href="https://www.shpa.org.au/drtc3">Don’t Rush to Crush Handbook, published by the Society of
+                        Hospital Pharmacists of Australia</a></li>
+                <li>If possible, avoid products containing an aminoglycoside (eg framycetin, neomycin) in patients with
+                    a perforated tympanic membrane or a tympanostomy tube in situ because of the risk of inner ear
+                    damage</li>
+                <li>Advise the patient to keep the ear dry during and for 2 weeks after treatment. This can be achieved
+                    by using earplugs (although canal tenderness may limit their use) or a shower or bathing cap during
+                    showering and swimming</li>
+                <li>If ear drops cannot be instilled because the canal is occluded, inserting a wick into the occluded
+                    ear canal can facilitate ear drop administration</li>
+                <li>If aminoglycoside-containing products cannot be avoided, they can be used with caution because
+                    treatment is of short duration</li>
+                <li>Debridement and dry aural toilet are the mainstays of treatment of fungal infection (otomycosis)
+                </li>
+                <li>Instil combination corticosteroid and antimicrobial ear drops after performing dry aural toilet</li>
+                <li>After ear drops are instilled, apply gentle pressure to the tragus (by pressing on it repeatedly
+                    without causing pain) for 30 seconds</li>
+                <li>It is not necessary to routinely perform culture to guide antimicrobial therapy in non-severe cases
+                    of acute diffuse otitis externa</li>
+                <li>If symptoms persist despite appropriate acute diffuse otitis externa treatment, consider
+                    noninfectious causes such as contact dermatitis, atopic dermatitis or seborrhoeic dermatitis</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on otitis externa</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis2b3 -->
+
+    <!--Otitis media bit starts-->
+
+
+    <!-- Start of otitis media page: ?allergy -->
+    <div data-role="page" id="otitis1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have a penicillin allergy?</span>
+                <span class="font15">See below for details on penicillin allergy severity</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis1a">No penicillin allergy</a></li>
+                <li><a href="#otitis1b">Non-severe immediate or delayed penicillin hypersensitivity</a></li>
+                <li><a href="#otitis1c">Severe immediate or delayed penicillin hypersensitivity</a></li>
+            </ul>
+            <hr />
+            <h4 class="color-primary"> History of penicillin allergy or adverse reaction</h4>
+            <p class="bold">No penicillin allergy</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as nausea and limited diarrhoea</li>
+                <li>Such reactions are frequently not replicable or generalizable to the whole class. It is safe to
+                    prescribe penicillin class antibiotics &#40;with the patient’s knowledge&#41;, and if required, use
+                    strategies for symptom control such as metoclopramide</li>
+            </ul>
+            <p class="bold">Non-severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as isolated rash.</li>
+                <li>There is only a 2-3% chance of cephalosporin allergy in a patient with a previous IgE mediated
+                    allergy to penicillin, and probably even less for other types of allergies. In most cases it is safe
+                    to administer a cephalosporin to a patient who has had a non-life threatening reaction to penicillin
+                </li>
+            </ul>
+            <p class="bold">Severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes anaphylaxis &#40;see below&#41; BUT DOES NOT INCLUDE other life-threatening reactions
+                    such as Stevens-Johnson Syndrome &#40;SJS&#41;, Toxic epidermal necrolysis &#40;TEN&#41;, Drug
+                    reaction with eosinophilia and systemic symptoms &#40;DRESS&#41; or interstitial nephritis. If your
+                    patient has a history of these, contact infectious diseases for advice</li>
+            </ul>
+            <hr>
+            <p class="bold">Penicillin anaphylaxis is highly likely if any ONE of the following is fulfilled:</p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>1.</b> Acute onset of an illness (minutes to several hours)
+                        involving the skin, mucosal tissue, or both (eg, generalised hives, pruritus or flushing,
+                        swollen lips-tongue-uvula) <b>and at least one of:</b></div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze/bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <b>OR</b>
+                            <li>Reduced blood pressure &#40;BP&#41; or associated symptoms and signs of end-organ
+                                malperfusion &#40;eg, hypotonia [collapse] syncope, incontinence&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>2. TWO OR MORE OF THE FOLLOWING</b> that occur rapidly
+                        <i>after exposure</i> to penicillin for that patient &#40;within minutes to several hours&#41;:
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Involvement of the skin-mucosal tissue &#40;eg, generalized hives, itch-flush, swollen
+                                lips-tongue-uvula&#41;.</li>
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze-bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <li>Reduced BP or associated symptoms &#40;eg, hypotonia [collapse], syncope,
+                                incontinence&#41;.</li>
+                            <li>Persistent gastrointestinal symptoms and signs &#40;eg, crampy abdominal pain,
+                                vomiting&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>3.</b> Reduced BP after exposure to penicillin in a patient
+                        with known penicillin allergy &#40;within minutes to several hours&#41;
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Reduced BP in adults is defined as a systolic BP of less than 90 mmHg or greater than 30
+                                percent decrease from that person's baseline</li>
+                            <li>In infants and children, reduced BP is defined as low systolic BP &#40;age-specific&#41;
+                                or greater than 30 percent decrease in systolic BP</li>
+                            <ul class="circle">
+                                <li>i.e. Less than 70 mmHg from 1 month up to 1 year</li>
+                                <li>Less than &#40;70 mmHg + [2 x age]&#41; from 1 to 10 years</li>
+                                <li>Less than 90 mmHg from 11 to 17 years</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1 -->
+
+    <!-- Start of otitis page: ?long time -->
+    <div data-role="page" id="otitis1a" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Has the patient already been treated for 48-72 hours and not responded to
+                    treatment?</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#otitis1a2">No, &#40;this is initial therapy&#41;</a></li>
+                <li><a href="#otitis1a1">Yes, &#40;not responding to conventional treatment&#41;</a></li>
+            </ul>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>Children who have not responded adequately to amoxicillin therapy by 48 to 72 hours may have
+                    infection caused by a beta-lactamase–producing strain of Haemophilus influenzae or Moraxella
+                    catarrhalis. Adding clavulanate to amoxicillin provides increased activity against these pathogens
+                </li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1 -->
+
+
+    <!-- Start of Otitis page : otitis media no allergy, not resistant -->
+    <div data-role="page" id="otitis1a2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">In most cases antibiotics are not necessary &#40;see below&#41; if
+                    antibiotic treatment is required give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Amoxicillin 15 mg/kg &#40;up to 500 mg&#41; orally, 8-hourly for 5
+                        days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b> if patient is unlikely to be adherent to an 8-hourly regimen</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Amoxicillin 30 mg/kg &#40;up to 1 g&#41; orally, 12-hourly for 5
+                        days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b> if patient has chronic otorrhoea <b>ADD</b> to the above:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 0.3% ear drops, 5 drops instilled into the affected ear,
+                        12-hourly until the middle ear has been free of discharge for at least 3 days.</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>For most children with acute otitis media, antibiotic therapy can be safely withheld. However,
+                    antibiotic therapy is required in the following groups:
+                    <ul>
+                        <li>infants younger than 6 months</li>
+                        <li>children younger than 2 years with bilateral infection</li>
+                        <li>children who are systemically unwell (eg lethargic, pale, very irritable); fever alone is
+                            not an indication for antibiotic therapy</li>
+                        <li>children with otorrhoea</li>
+                        <li>Aboriginal and Torres Strait Islander children—for treatment recommendations, see the
+                            Recommendations for clinical care guidelines on the management of otitis media in Aboriginal
+                            and Torres Strait Islander populations</li>
+                        <li>children at high risk of complications (eg immunocompromised children)</li>
+                    </ul>
+                </li>
+                <li>Antibiotic treatment is not required for children with otitis media with effusion</li>
+                <li>Do not use lower amoxicillin doses because they will not achieve adequate plasma and tissue
+                    concentrations to treat resistant Streptococcus pneumoniae strains</li>
+                <li>For every 100 children treated with antibiotics, only five children will be better at 2 to 3 days as
+                    a consequence of taking antibiotics</li>
+                <li>Many patients have an expectation of treatment with antibiotics. For children who do not require
+                    initial antibiotic therapy, effective communication with the patient or carer about the limited role
+                    of antibiotics in acute otitis media is essential. The discussion should address misconceptions
+                    about the effectiveness of antibiotic therapy and the expectation of an antibiotic prescription.
+                </li>
+                <li>Controlled trials showed decongestants, antihistamines and oral corticosteroids are not beneficial
+                    for acute otitis media.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on otitis media</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1a2 -->
+
+
+    <!-- Start of Otitis page : otitis media no allergy, resistant -->
+    <div data-role="page" id="otitis1a1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">If no response to previous antibiotic treatment give:</span>
+            </h3>
+            <div id="backcolour">
+                <div class="table-responsive">
+                    <table class="table-blank">
+                        <tr>
+                            <td><span class="font17">Infants 1 month to younger than 2 months: &nbsp;</span></td>
+                            <td><span class="color-purple"> Amoxicillin+clavulanate 15+3.75 mg/kg orally, 8-hourly for 5
+                                    to 7 days.</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="font17">Children 2 months or older: &nbsp;</span></td>
+                            <td><span class="color-purple">Amoxicillin+clavulanate 22.5+3.2 mg/kg &#40;up to 875+125
+                                    mg&#41; orally, 12-hourly for 5 to 7 days.</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="mrgn20b"><b>AND</b> if patient has chronic otorrhoea <b>ADD</b> to the above:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 0.3% ear drops, 5 drops instilled into the affected ear,
+                        12-hourly until the middle ear has been free of discharge for at least 3 days.</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>For most children with acute otitis media, antibiotic therapy can be safely withheld. However,
+                    antibiotic therapy is required in the following groups:
+                    <ul>
+                        <li>infants younger than 6 months</li>
+                        <li>children younger than 2 years with bilateral infection</li>
+                        <li>children who are systemically unwell (eg lethargic, pale, very irritable); fever alone is
+                            not an indication for antibiotic therapy</li>
+                        <li>children with otorrhoea</li>
+                        <li>Aboriginal and Torres Strait Islander children—for treatment recommendations, see the
+                            Recommendations for clinical care guidelines on the management of otitis media in Aboriginal
+                            and Torres Strait Islander populations</li>
+                        <li>children at high risk of complications (eg immunocompromised children)</li>
+                    </ul>
+                </li>
+                <li>Antibiotic treatment is not required for children with otitis media with effusion</li>
+                <li>Do not use lower amoxicillin doses because they will not achieve adequate plasma and tissue
+                    concentrations to treat resistant Streptococcus pneumoniae strains</li>
+                <li>For every 100 children treated with antibiotics, only five children will be better at 2 to 3 days as
+                    a consequence of taking antibiotics</li>
+                <li>Many patients have an expectation of treatment with antibiotics. For children who do not require
+                    initial antibiotic therapy, effective communication with the patient or carer about the limited role
+                    of antibiotics in acute otitis media is essential. The discussion should address misconceptions
+                    about the effectiveness of antibiotic therapy and the expectation of an antibiotic prescription.
+                </li>
+                <li>Controlled trials showed decongestants, antihistamines and oral corticosteroids are not beneficial
+                    for acute otitis media.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on otitis media</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1a -->
+
+    <!-- Start of Otitis page : otitis media mild allergy -->
+    <div data-role="page" id="otitis1b" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">In most cases antibiotics are not necessary &#40;see below&#41; if
+                    antibiotic treatment is required give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Cefuroxime (child 3 months or older) 15 mg/kg up to 500 mg orally,
+                        12-hourly for 5 days</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b></p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Trimethoprim+sulfamethoxazole (child 1 month or older) 4+20 mg/kg up to
+                        160+800 mg orally, 12-hourly for 5 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b> if patient has chronic otorrhoea <b>ADD</b> to the above:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 0.3% ear drops, 5 drops instilled into the affected ear,
+                        12-hourly until the middle ear has been free of discharge for at least 3 days.</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>For most children with acute otitis media, antibiotic therapy can be safely withheld. However,
+                    antibiotic therapy is required in the following groups:
+                    <ul>
+                        <li>infants younger than 6 months</li>
+                        <li>children younger than 2 years with bilateral infection</li>
+                        <li>children who are systemically unwell (eg lethargic, pale, very irritable); fever alone is
+                            not an indication for antibiotic therapy</li>
+                        <li>children with otorrhoea</li>
+                        <li>Aboriginal and Torres Strait Islander children—for treatment recommendations, see the
+                            Recommendations for clinical care guidelines on the management of otitis media in Aboriginal
+                            and Torres Strait Islander populations</li>
+                        <li>children at high risk of complications (eg immunocompromised children)</li>
+                    </ul>
+                </li>
+                <li>Antibiotic treatment is not required for children with otitis media with effusion</li>
+                <li>Do not use lower amoxicillin doses because they will not achieve adequate plasma and tissue
+                    concentrations to treat resistant Streptococcus pneumoniae strains</li>
+                <li>For every 100 children treated with antibiotics, only five children will be better at 2 to 3 days as
+                    a consequence of taking antibiotics</li>
+                <li>Many patients have an expectation of treatment with antibiotics. For children who do not require
+                    initial antibiotic therapy, effective communication with the patient or carer about the limited role
+                    of antibiotics in acute otitis media is essential. The discussion should address misconceptions
+                    about the effectiveness of antibiotic therapy and the expectation of an antibiotic prescription.
+                </li>
+                <li>Controlled trials showed decongestants, antihistamines and oral corticosteroids are not beneficial
+                    for acute otitis media.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on otitis media</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1b -->
+
+    <!-- Start of Otitis page : otitis media mild allergy -->
+    <div data-role="page" id="otitis1c" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Otitis media treatment:</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">In most cases antibiotics are not necessary &#40;see below&#41; if
+                    antibiotic treatment is required give:</span>
+            </h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Trimethoprim+sulfamethoxazole (child 1 month or older) 4+20 mg/kg up to
+                        160+800 mg orally, 12-hourly for 5 days</span>
+                </h4>
+                <p class="mrgn20b"><b>AND</b> if patient has chronic otorrhoea <b>ADD</b> to the above:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Ciprofloxacin 0.3% ear drops, 5 drops instilled into the affected ear,
+                        12-hourly until the middle ear has been free of discharge for at least 3 days.</span>
+                </h4>
+            </div>
+            <hr>
+            <ul type="circle" class="line30">
+                <li>For most children with acute otitis media, antibiotic therapy can be safely withheld. However,
+                    antibiotic therapy is required in the following groups:
+                    <ul>
+                        <li>infants younger than 6 months</li>
+                        <li>children younger than 2 years with bilateral infection</li>
+                        <li>children who are systemically unwell (eg lethargic, pale, very irritable); fever alone is
+                            not an indication for antibiotic therapy</li>
+                        <li>children with otorrhoea</li>
+                        <li>Aboriginal and Torres Strait Islander children—for treatment recommendations, see the
+                            Recommendations for clinical care guidelines on the management of otitis media in Aboriginal
+                            and Torres Strait Islander populations</li>
+                        <li>children at high risk of complications (eg immunocompromised children)</li>
+                    </ul>
+                </li>
+                <li>Antibiotic treatment is not required for children with otitis media with effusion</li>
+                <li>Do not use lower amoxicillin doses because they will not achieve adequate plasma and tissue
+                    concentrations to treat resistant Streptococcus pneumoniae strains</li>
+                <li>For every 100 children treated with antibiotics, only five children will be better at 2 to 3 days as
+                    a consequence of taking antibiotics</li>
+                <li>Many patients have an expectation of treatment with antibiotics. For children who do not require
+                    initial antibiotic therapy, effective communication with the patient or carer about the limited role
+                    of antibiotics in acute otitis media is essential. The discussion should address misconceptions
+                    about the effectiveness of antibiotic therapy and the expectation of an antibiotic prescription.
+                </li>
+                <li>Controlled trials showed decongestants, antihistamines and oral corticosteroids are not beneficial
+                    for acute otitis media.</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on otitis media</a> - Antibiotic Expert Groups. Therapeutic
+                    guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /otitis1c -->
+
+
+
+    <!-- OTITIS MEDIA AND EXTERNA ENDS -->
+
+
+
+
+    <!-- Start of quinsy ?penicillin -->
+    <div data-role="page" id="quinsy" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Peritonsillar abscess &#40;quinsy&#41; or peritonsillar cellulitis</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="mrgn20b">
+                <span class="color-primary">Does the patient have a penicillin allergy?</span>
+                <span class="font15"> &#40;See below for details on penicillin allergy severity&#41;</span>
+            </h3>
+            <ul data-role="listview" data-inset="true" class="listview">
+                <li><a href="#quinsy1">No penicillin allergy</a></li>
+                <li><a href="#quinsy2">Non-severe immediate or delayed penicillin hypersensitivity</a></li>
+                <li><a href="#quinsy3">Severe immediate or delayed penicillin hypersensitivity</a></li>
+            </ul>
+            <hr />
+            <h4 class="color-primary"> History of penicillin allergy or adverse reaction</h4>
+            <p class="bold">No penicillin allergy</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as nausea and limited diarrhoea</li>
+                <li>Such reactions are frequently not replicable or generalizable to the whole class. It is safe to
+                    prescribe penicillin class antibiotics &#40;with the patient’s knowledge&#41;, and if required, use
+                    strategies for symptom control such as metoclopramide</li>
+            </ul>
+            <p class="bold">Non-severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes non-severe reactions such as isolated rash.</li>
+                <li>There is only a 2-3% chance of cephalosporin allergy in a patient with a previous IgE mediated
+                    allergy to penicillin, and probably even less for other types of allergies. In most cases it is safe
+                    to administer a cephalosporin to a patient who has had a non-life threatening reaction to penicillin
+                </li>
+            </ul>
+            <p class="bold">Severe immediate or delayed penicillin hypersensitivity</p>
+            <ul class="line30">
+                <li>This includes anaphylaxis &#40;see below&#41; BUT DOES NOT INCLUDE other life-threatening reactions
+                    such as Stevens-Johnson Syndrome &#40;SJS&#41;, Toxic epidermal necrolysis &#40;TEN&#41;, Drug
+                    reaction with eosinophilia and systemic symptoms &#40;DRESS&#41; or interstitial nephritis. If your
+                    patient has a history of these, contact infectious diseases for advice</li>
+            </ul>
+            <hr>
+            <p class="bold">Penicillin anaphylaxis is highly likely if any ONE of the following is fulfilled:</p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>1.</b> Acute onset of an illness (minutes to several hours)
+                        involving the skin, mucosal tissue, or both (eg, generalised hives, pruritus or flushing,
+                        swollen lips-tongue-uvula) <b>and at least one of:</b></div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze/bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <b>OR</b>
+                            <li>Reduced blood pressure &#40;BP&#41; or associated symptoms and signs of end-organ
+                                malperfusion &#40;eg, hypotonia [collapse] syncope, incontinence&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>2. TWO OR MORE OF THE FOLLOWING</b> that occur rapidly
+                        <i>after exposure</i> to penicillin for that patient &#40;within minutes to several hours&#41;:
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Involvement of the skin-mucosal tissue &#40;eg, generalized hives, itch-flush, swollen
+                                lips-tongue-uvula&#41;.</li>
+                            <li>Respiratory compromise &#40;eg, dyspnea, wheeze-bronchospasm, stridor, reduced peak
+                                expiratory flow, hypoxemia&#41;.</li>
+                            <li>Reduced BP or associated symptoms &#40;eg, hypotonia [collapse], syncope,
+                                incontinence&#41;.</li>
+                            <li>Persistent gastrointestinal symptoms and signs &#40;eg, crampy abdominal pain,
+                                vomiting&#41;.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="bold">OR </p>
+            <div id="allergycolour">
+                <div class="row">
+                    <div class="color-purple col-sm-3"><b>3.</b> Reduced BP after exposure to penicillin in a patient
+                        with known penicillin allergy &#40;within minutes to several hours&#41;
+                    </div>
+                    <div class="col-sm-9">
+                        <ul class="line30">
+                            <li>Reduced BP in adults is defined as a systolic BP of less than 90 mmHg or greater than 30
+                                percent decrease from that person's baseline</li>
+                            <li>In infants and children, reduced BP is defined as low systolic BP &#40;age-specific&#41;
+                                or greater than 30 percent decrease in systolic BP</li>
+                            <ul class="circle">
+                                <li>i.e. Less than 70 mmHg from 1 month up to 1 year</li>
+                                <li>Less than &#40;70 mmHg + [2 x age]&#41; from 1 to 10 years</li>
+                                <li>Less than 90 mmHg from 11 to 17 years</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /quinsy -->
+
+
+    <!-- Start of quinsy no penicillin allergy: -->
+    <div data-role="page" id="quinsy1" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Peritonsillar abscess &#40;quinsy&#41; or peritonsillar cellulitis</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">If the patient has no penicillin allergy give:</h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Benzylpenicillin 1.2 g &#40;child: 50 mg/kg up to 1.2 g&#41;
+                        intravenously, 6-hourly</span>
+                </h4>
+                <p class="mrgn20b"><b>THEN,</b> 1-2 days post abscess drainage, or following cellulitis improvement,
+                    switch to oral:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Phenoxymethylpenicillin 500 mg &#40;child: 15 mg/kg up to 500 mg&#41;
+                        orally, 12-hourly to complete a total of 10 days of therapy &#40;intravenous + oral&#41;</span>
+                </h4>
+            </div>
+            <hr>
+            <ul class="line30">
+                <li>A 12-hourly dosing regimen for phenoxymethylpenicillin is preferred over more frequent dosing
+                    regimens because of improved adherence</li>
+                <li>Monitor patients for signs of airway obstruction. If present, urgent airway management is required
+                </li>
+                <li>Drainage or aspiration of the abscess is the mainstay of treatment for peritonsillar abscess</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on peritonsillar abscess and cellulitis</a> - Antibiotic Expert
+                    Groups. Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited;
+                    2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /quinsy -->
+
+    <!-- Start of quinsy MILD penicillin allergy: -->
+    <div data-role="page" id="quinsy2" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Peritonsillar abscess &#40;quinsy&#41; or peritonsillar cellulitis</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">If the patient has non-severe penicillin hypersensitivity give:</h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Clindamycin 600 mg &#40;child: 15 mg/kg up to 600 mg&#41; intravenously,
+                        8-hourly</span>
+                </h4>
+                <p class="mrgn20b"><b>THEN,</b> 1-2 days post abscess drainage, or following cellulitis improvement,
+                    switch to oral:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Clindamycin 450 mg &#40;child: 10
+                        mg/kg up to 450 mg&#41; orally, 8-hourly to complete a total of 10 days of therapy
+                        &#40;intravenous + oral&#41;</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b> if oral clindamycin is not tolerated by a child replace with:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Cefalexin 25 mg/kg up to 1 g orally,
+                        12-hourly to complete a total of 10 days of therapy &#40;intravenous + oral&#41;</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for clindamycin IV is:</span>
+                <span class="font15 bold"> 3<script> document.write(getCode())</script>qui</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>THREE</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past 72 hours. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for clindamycin orally is:</span>
+                <span class="font15 bold"> 10<script> document.write(getCode())</script>qui</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>TEN</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past ten days. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr>
+            <ul class="line30">
+                <li>Monitor patients for signs of airway obstruction. If present, urgent airway management is required
+                </li>
+                <li>Drainage or aspiration of the abscess is the mainstay of treatment for peritonsillar abscess</li>
+                <li>Oral liquid formulations of clindamycin have an unpleasant taste and are often poorly tolerated by
+                    children</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on peritonsillar abscess and cellulitis</a> - Antibiotic Expert
+                    Groups. Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited;
+                    2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /quinsy -->
+
+    <!-- Start of quinsy BAD penicillin allergy: -->
+    <div data-role="page" id="quinsy3" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Peritonsillar abscess &#40;quinsy&#41; or peritonsillar cellulitis</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">If the patient has non-severe penicillin hypersensitivity give:</h3>
+            <div id="backcolour">
+                <h4 class="medicine mrgn20b">
+                    <span class="color-purple">Clindamycin 600 mg &#40;child: 15 mg/kg up to 600 mg&#41; intravenously,
+                        8-hourly</span>
+                </h4>
+                <p class="mrgn20b"><b>THEN,</b> 1-2 days post abscess drainage, or following cellulitis improvement,
+                    switch to oral:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Clindamycin 450 mg &#40;child: 10
+                        mg/kg up to 450 mg&#41; orally, 8-hourly to complete a total of 10 days of therapy
+                        &#40;intravenous + oral&#41;</span>
+                </h4>
+                <p class="mrgn20b"><b>OR</b> if oral clindamycin is not tolerated by a child replace with:</p>
+                <h4 class="medicine mrgn20b">
+                    <span class="font17">&#9312;</span><span class="color-purple"> Azithromycin 12 mg/kg up to 500 mg
+                        orally, daily. To complete a total of either 10 days of total therapy &#40;intravenous +
+                        oral&#41; or 5 days of oral azithromycin &#40;whichever comes soonest&#41;</span>
+                </h4>
+            </div>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for clindamycin IV is:</span>
+                <span class="font15 bold"> 3<script> document.write(getCode())</script>qui</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>THREE</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past 72 hours. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr />
+            <h4 class="mrgn20b text-center codefor">
+                <span class="color-success">Code for azithromycin orally is:</span>
+                <span class="font15 bold"> 5<script> document.write(getCode())</script>qui</span>
+                <div class="font15 mrgn20b text-left">This code is valid for <b>FIVE</b> days only, starting from the
+                    first day of treatment for this condition. Infectious diseases must be contacted if treatment is to
+                    continue past five days. Please annotate this code on the medication chart and document when
+                    infectious diseases are to be contacted in the patient notes.</div>
+            </h4>
+            <hr>
+            <ul class="line30">
+                <li>Monitor patients for signs of airway obstruction. If present, urgent airway management is required
+                </li>
+                <li>Drainage or aspiration of the abscess is the mainstay of treatment for peritonsillar abscess</li>
+                <li>Oral liquid formulations of clindamycin have an unpleasant taste and are often poorly tolerated by
+                    children</li>
+            </ul>
+            <hr>
+            <h4 class="mrgn20b references">
+                <span class="color-purple"><b>References: </b></span><br><br>
+                <span class="font15"><a
+                        href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">See section on peritonsillar abscess and cellulitis</a> - Antibiotic Expert
+                    Groups. Therapeutic guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited;
+                    2019. </span>
+            </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="index.html" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /quinsy -->
+
+</body>
+<script src="bootstrap/js/script.js"></script>
+<script src="bootstrap/js/test.js"></script>
+<script src="bootstrap/js/email.js"></script>
+
+</html>

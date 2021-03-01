@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--<html manifest="cache.manifest"> TURNED OFF DURING TESTING-->
+<!--<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">-->
+<!-- Added the three lines here to automatically update cache while testing -->
+<!--<meta http-equiv="expires" content="Sat, 31 Oct 2016 00:00:00 GMT">-->
+<!-- Added the three lines here to automatically update cache while testing -->
+<!--<meta http-equiv="pragma" content="no-cache">-->
+<!-- Added the three lines here to automatically update cache while testing -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAAMS - Western Australia AntiMicrobial Stewardship</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/basic.css" />
+    <link rel="stylesheet" href="bootstrap/css/style.css" />
+    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/codecheckWA.js"></script>
+    <!-- Needed for Forms Feature Detection -->
+    <script src="polyfill/better-dom.min.js"></script>
+    <!-- Needed for Validation -->
+    <script src="polyfill/better-dateinput-polyfill.js"></script>
+    <script src="polyfill/ie-array-polyfill.js"></script>
+    <!-- General helpful functions -->
+    <script src="bootstrap/js/kraken.js"></script>
+</head>
+
+<body>
+    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+    <!-- Start of first page: #home -->
+    <div data-role="page" id="home">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <p class="color-primary bold font16 mrgn20b">Please email any recommendations for improvement &#40;big or
+                small&#41; to AMS.AHS@health.wa.gov.au</p>
+            <ul class="line30">
+                <li>This application is for adults only, until further notice</li>
+                <li>Although updated to work on older versions of internet explorer, this application works best on
+                    google chrome or internet explorer version 8 or higher</li>
+                <li>This application is for Armadale and Kalamunda hospitals only</li>
+                <li>All doses in this application assume normal renal function, for dosing in renal impairment see the
+                    <a href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                        target="_blank">Australian Therapeutic Guidelines</a></li>
+                <li>For diseases not covered here please consult the eTG. If a restricted antibiotic is required, ID
+                    approval is required</li>
+                <li>Single doses of restricted antibiotics are allowed in emergency situations. Further usage requires
+                    ID approval</li>
+            </ul>
+            <div class="form-group-lg">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                    <input id="kraken-search-input" type="text" class="form-control" placeholder="Filter Items" onKeyUp="krakenSearch()">
+                </div>
+            </div>
+            <ul data-role="listview" data-filter="true" data-autodividers="true" data-inset="true"
+                class="search-control listview">
+                <li><a href="dosecalcs.html#codeCheck">Code checker</a></li>
+            </ul>
+            <ul data-role="listview" data-filter="true" data-autodividers="true" data-inset="true"
+                class="search-control listview">
+                <li><a tags="prostatitis,acute bacterial prostatitis,bacterial prostatitis,prostate,prostatic" href="urinary.html#prostati">Acute bacterial prostatitis</a></li>
+                <li><a tags="acute,mastoiditis,otitis,media,temporal bone,subperiosteal,intratemporal,intracranial,facial nerve palsy,necrotising" href="headNneck.html#mastoid">Acute mastoiditis in children</a></li>
+                <li><a tags="bite,animal,human" href="skinNsoftTissue.html#bite">Animal or human bite</a></li>
+                <li><a tags="appendicitis" href="intraab.html#intrab1">Appendicitis</a></li>
+                <li><a tags="Arthroplasty,metal,major joint,knee,hip" href="#homex">Arthroplasty related infection</a></li>
+                <li><a tags="ascending cholangitis,cholangitis" href="intraab.html#intrab6">Ascending cholangitis</a></li>
+                <li><a tags="aspiration,pneumonia,aspiration pneumonia" href="respiratory.html#asp">Aspiration Pneumonia</a></li>
+                <li><a tags="Brain,abscess" href="#homex">Brain abscess</a></li>
+                <li><a tags="bronchiectasis" href="respiratory.html#bronchi">Bronchiectasis</a></li>
+                <li><a tags="abscess,carbuncle" href="skinNsoftTissue.html#carble">Carbuncle/abscess</a></li>
+                <li><a tags="cardiac,pacemaker,valve" href="#homex">Cardiac device associated infection</a></li>
+                <li><a tags="urinary,tract,uti,pyelonephritis,catheter,indwelling" href="urinary.html#cath">Catheter associated urinary tract infection</a></li>
+                <li><a tags="Cellulitis,cellulitic" href="skinNsoftTissue.html#cell">Cellulitis (skin)</a></li>
+                <li><a tags="eye,cellulitis,cellulitic,periorbital,orbital" href="skinNsoftTissue.html#celli">Cellulitis of the eye</a></li>
+                <li><a tags="cholecystitis,Choledocholithiasis,gallbladder,Cystic duct obstruction,bile" href="intraab.html#intrab2">Cholecystitis</a></li>
+                <li><a tags="Chorioamnionitis,intra-amniotic,amnionitis,rupture of membrane" href="intraab.html#chor">Chorioamnionitis (intra-amniotic infection)</a></li>
+                <li><a tags="community acquired pneumonia,pneumonia,cap" href="respiratory.html#cap">Community Acquired Pneumonia</a></li>
+                <li><a tags="diabetes,diabetic,foot,dfi" href="skinNsoftTissue.html#diabf">Diabetic foot infection</a></li>
+                <li><a tags="diverticulitis,diverticulosis,diverticular" href="intraab.html#intrab3">Diverticulitis</a></li>
+                <li><a tags="dosing" href="dosecalcs.html#dose">Dosing nomograms and calculators</a></li>
+                <li><a tags="encephalitis" href="SurgProNmiscInfections.html#encph">Encephalitis</a></li>
+                <li><a tags="orchitis,epididymo,scrotum,epididymo-orchitis" href="urinary.html#epidi">Epididymo-orchitis</a></li>
+                <li><a tags="epiglottitis,supraglottitis,epiglottis infection" href="headNneck.html#epigl">Epiglottitis</a></li>
+                <li><a tags="neutropenia,febrile neutropenia,chemotherapy,cancer,neutropenic fever" href="sepsisNsimilar.html#febne">Febrile neutropenia</a></li>
+                <li><a tags="colitis,gastroenteritis,viral gastroenteritis,gastro,diarrhoea" href="intraab.html#gastro1">Gastroenteritis and colitis</a></li>
+                <li><a tags="hospital acquired pneumonia,pneumonia,hap" href="respiratory.html#hap">Hospital Acquired Pneumonia</a></li>
+                <li><a tags="endocarditis,infective" href="#homex">Infective endocarditis</a></li>
+                <li><a tags="COPD,chronic obstructive pulmonary disease,exacerbation,emphysema" href="respiratory.html#iecopd">Infective exacerbation of COPD</a></li>
+                <li><a tags="influenza,flu" href="respiratory.html#influ">Influenza infection</a></li>
+                <li><a tags="abdominal,infection" href="intraab.html#intrab">Intra-abdominal infection</a></li>
+                <li><a tags="lactation,lactational,mastitis,abscess,breastfeeding,breast" href="skinNsoftTissue.html#lacto">Lactational mastitis</a></li>
+                <li><a tags="abscess,liver" href="intraab.html#liver">Liver abscess</a></li>
+                <li><a tags="lung,abscess,respiratory,bronchial,community acquired,hospital acquired,pulmonary,aspiration" href="respiratory.html#luabsc">Lung abscess</a></li>
+                <li><a tags="meningitis,viral meningitis,bacterial meningitis" href="sepsisNsimilar.html#menin">Meningitis</a></li>
+                <li><a tags="fasciitis,necrotising,fournier" href="skinNsoftTissue.html#necro">Necrotising fasciitis</a></li>
+                <li><a tags="neonatal,herpes,simplex,HSV,encephalitis" href="SurgProNmiscInfections.html#neoherp">Neonatal herpes infection</a></li>
+                <li><a tags="nursing home,pneumonia,aged care" href="respiratory.html#nursicap">Nursing home or aged care facility pneumonia</a></li>
+                <li><a tags="open fracture,compound fracture,gustillo,bone" href="boneNjoint.html#open">Open &#40;compound&#41; fracture</a></li>
+                <li><a tags="osteomyelitis,bone" href="boneNjoint.html#osteo">Osteomyelitis</a></li>
+                <li><a tags="otitis,media,externa,middle ear,swimmers ear" href="headNneck.html#otitis">Otitis media or externa</a></li>
+                <li><a tags="pancreatitis,pancreatic" href="intraab.html#intrab4">Pancreatitis</a></li>
+                <li><a tags="parapneumonic,empyema,effusion" href="respiratory.html#empara">Parapneumonic effusion or empyema</a></li>
+                <li><a tags="pelvic,PID" href="intraab.html#pelvi">Pelvic inflammatory disease</a></li>
+                <li><a tags="penetrating,eye,opthalmic,injury,ocular" href="SurgProNmiscInfections.html#eyepen">Penetrating eye injury</a></li>
+                <li><a tags="peritonitis" href="intraab.html#intrab5">Peritonitis</a></li>
+                <li><a tags="abscess,peritonsillar,quinsy,throat" href="headNneck.html#quinsy">Peritonsillar abscess &#40;quinsy&#41; or cellulitis</a></li>
+                <li><a tags="peritoneal,dialysis,peritonitis,peritoneal dialysis associated peritonitis" href="intraab.html#intrab5c">Peritoneal dialysis associated peritonitis</a></li>
+                <li><a tags="perforated viscus,viscus,diverticulitis,perforation,perforated" href="intraab.html#intrab5a">Peritonitis due to perforated viscus</a></li>
+                <li><a tags="pneumonia" href="respiratory.html#pneum">Pneumonia</a></li>
+                <li><a tags="postpartum,endometritis" href="intraab.html#postendo">Postpartum endometritis</a></li>
+                <li><a tags="pelvic,PID,postprocedural,post-procedural,post procedural,procedure" href="intraab.html#pospel">Postprocedural pelvic infection</a></li>
+                <li><a tags="traumatic,wound,trauma" href="skinNsoftTissue.html#trauma">Post traumatic wound</a></li>
+                <li><a tags="infection,respiratory" href="respiratory.html#respi">Respiratory tract infections</a></li>
+                <li><a tags="scabies,crusted" href="SurgProNmiscInfections.html#scab">Scabies (crusted)</a></li>
+                <li><a tags="sepsis,septic,severe sepsis" href="sepsisNsimilar.html#sepsis">Sepsis</a></li>
+                <li><a tags="abortion,septic" href="intraab.html#septor">Septic abortion</a></li>
+                <li><a tags="arthritis,septic" href="boneNjoint.html#septar">Septic arthritis</a></li>
+                <li><a tags="bursitis,septic" href="boneNjoint.html#sepbur">Septic bursitis</a></li>
+                <li><a tags="shingles" href="SurgProNmiscInfections.html#shing">Shingles</a></li>
+                <li><a tags="spinal,epidural,abscess" href="#homex">Spinal epidural abscess</a></li>
+                <li><a tags="spontaneous bacterial peritonitis,peritonitis,sbp" href="intraab.html#intrab5b">Spontaneous Bacterial Peritonitis (SBP)</a></li>
+                <li><a tags="surgery,prophylaxis,surgical" href="SurgProNmiscInfections.html#surgpro">Surgical prophylaxis</a></li>
+                <li><a tags="surgical,surgery,wound,infection,post-operative,post operative,incision" href="skinNsoftTissue.html#surginf">Surgical site infection</a></li>
+                <li><a tags="ulcer,pressure,bed ulcer,bed sore" href="skinNsoftTissue.html#ulcer">Skin ulcer &#40;non-diabetic&#41;</a></li>
+                <li><a tags="third,degree,tear,sphincter,obstetric,vaginal,OASIS,anal,delivery" href="skinNsoftTissue.html#oasis">Third or fourth degree perianal tear prophylaxis</a></li>
+                <li><a tags="tropical,tropically,pneumonia,melioidosis" href="respiratory.html#tcap">Tropically Acquired Community Acquired Pneumonia</a></li>
+                <li><a tags="urinary,tract,uti,pyelonephritis" href="urinary.html#utis">Urinary tract infections &#40;UTIs&#41;</a></li>
+                <li><a tags="vascular,graft,aneurysm" href="#homex">Vascular graft or aneurysm related infection</a></li>
+                <li><a tags="water,vibrio,salt water,fresh water,sewage" href="skinNsoftTissue.html#watwo">Water immersed wound infection</a></li>
+            </ul>
+            <hr>
+        </div>
+        <!-- /content -->
+    </div>
+    <!-- /home -->
+
+    <!-- Start of CONTACT INFECTIOUS DISEASES IT IS TOO HARD -->
+    <div data-role="page" id="homex" data-theme="a">
+        <div data-role="header" class="frontpage">
+            <h1><img src="img/nt-flower.png" alt="WAAMS - Western Australia AntiMicrobial Stewardship" />
+            <a href="index.html" STYLE="color: white; text-decoration: none">WAAMS - Western Australia AntiMicrobial
+                    Stewardship</a></h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="secondpage">
+            <h1>Please contact infectious diseases</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="container-fluid">
+            <h3 class="color-primary mrgn15b">Treatment is complex</h3>
+            <div id="backcolour">
+                <h4 class="color-danger mrgn15b">Please contact infectious diseases for advice.</h4>
+            </div>
+        <hr>
+        <h4 class="mrgn20b references">
+            <span class="color-purple"><b>References: </b></span><br><br>
+            <span class="font15"><a
+                    href="https://tgldcdp-tg-org-au.smhslibresources.health.wa.gov.au/topicTeaser?guidelinePage=Antibiotic&etgAccess=true"
+                    target="_blank">Please check the relevant section</a> - Antibiotic Expert Groups. Therapeutic
+                guidelines: antibiotic. Version 15. Melbourne: Therapeutic Guidelines Limited; 2019. </span>
+        </h4>
+        </div>
+        <!-- /content -->
+        <div class="footer">
+            <a href="#home" class="btn btn-lg btn-success"><span
+                    class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /homex -->
+
+    <script src="bootstrap/js/script.js"></script>
+    <script src="bootstrap/js/test.js"></script>
+    <script src="bootstrap/js/email.js"></script>
+</body>
+
+</html>
